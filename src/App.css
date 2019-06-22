@@ -8,8 +8,54 @@
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.initial {
+ position:absolute;
+    top:0px;
+    left:0px;
+}
+
+.maintext {
+  position:absolute;
+  bottom:340px;
+  left:175px;
+}
+
+.blacklayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  z-index: -1;
+  opacity: 0.0;
+}
+
+h1, .App-intro {
+  color: #fff;
+  font-size: 66px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 450;
+}
+
+.desc{
+  color: #fff;
+  font-size: 26px;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+.svg{
+  min-height: 100vh;
+}
+
+.content {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,6 +67,51 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.dotAnimation {
+  position: fixed;
+  animation-name: dotShrink;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode:forwards;
+}
+
+.reddot {
+  animation-delay: 2.0s;
+  animation-duration: 0.9s;
+}
+
+.yellowdot {
+  animation-delay: 1.9s;
+  animation-duration: 0.9s;
+}
+
+.greendot {
+  animation-delay: 2.1s;
+  animation-duration: 0.9s;
+}
+
+.browndot {
+  animation-delay: 2.2s;
+  animation-duration: 0.9s;
+}
+
+.initialAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes dotShrink {
+    from {
+        r: 2000;
+    }
+    to {
+        r: 24;
+    }
 }
 
 @keyframes App-logo-spin {
