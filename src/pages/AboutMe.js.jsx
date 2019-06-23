@@ -1,12 +1,14 @@
 import React from "react";
-import { RED, YELLOW, BROWN, GREEN } from './constants.js';
-import './App.css';
-import { AnimatedText } from "./AnimatedText";
-import selfie from './media/polaroid.jpg';
-import soundcloud from './media/soundcloud.png';
-import facebook from './media/facebook.png';
-import instagram from './media/instagram.png';
-import email from './media/email.png';
+import '../App.css';
+import { RED, YELLOW, BROWN, GREEN } from '../constants.js';
+import { AnimatedText } from "../AnimatedText";
+import Zoom from 'react-reveal/Zoom';
+import selfie from '../media/polaroid.jpg';
+import soundcloud from '../media/soundcloud.png';
+import facebook from '../media/facebook.png';
+import instagram from '../media/instagram.png';
+import email from '../media/email.png';
+
 
 class AboutMe extends React.Component{
   constructor(props) {
@@ -21,12 +23,47 @@ class AboutMe extends React.Component{
     };
   }
 
+  iconsUnlocked(){
+    return (this.state.pomFontColor == GREEN && this.state.mathFontColor == GREEN &&
+            this.state.csFontColor == GREEN && this.state.designFontColor == GREEN &&
+            this.state.renderSelfie);
+  }
+
   render() {
+    let iconBar = (
+      <div className="smallColumn">
+        <div className="icons">
+          <Zoom top delay={100}>
+            <a href="https://www.facebook.com/hueey1">
+              <img src={facebook} className="icon"/>
+            </a>
+          </Zoom>
+          <Zoom top delay={300}>
+            <a href="https://soundcloud.com/hueywastaken/">
+              <img src={soundcloud} className="icon" />
+            </a>
+          </Zoom>
+          <Zoom top delay={500}>
+            <a href="https://www.instagram.com/hueywastaken/">
+              <img src={instagram} className="icon" />
+            </a>
+          </Zoom>
+          <Zoom top delay={700}>
+            <a href="mailto:hssa2016@pomona.edu">
+              <img src={email} className="icon" />
+            </a>
+          </Zoom>
+        </div>
+      </div>
+    );
+
     return (
       <div className="aboutMePage">
       <div className="smallColumn">
         <div className="photo">
+          <Zoom left>
           {this.state.renderSelfie && <img src={selfie} className="selfie"/>}
+          </Zoom>
         </div>
 
       </div>
@@ -63,17 +100,9 @@ class AboutMe extends React.Component{
                 onMouseEnter={() => this.setState({ designFontColor: GREEN })}
                 > design</span> <br />
       </p>
+      {this.iconsUnlocked() && iconBar}
       </div>
-      <div className="smallColumn">
-
-      </div>
-      <div className="icons">
-        <a href="http://www.facebook.com"><img src={facebook} className="icon"/></a>
-        <a href="http://www.soundcloud.com"><img src={soundcloud} className="icon" /></a>
-        <a href="http://www.instagram.com"><img src={instagram} className="icon" /></a>
-        <a href="http://www.gmail.com"><img src={email} className="icon" /></a>
-      </div>
-      </div>
+    </div>
     )
   }
 }

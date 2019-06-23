@@ -1,10 +1,7 @@
 import React from "react";
-import logo from './logo.svg';
-import { RED, YELLOW, BROWN, GREEN } from './constants.js';
-import Typist from 'react-typist';
+import { RED, YELLOW, BROWN, GREEN } from '../constants.js';
 
 class CircleAnimation extends React.Component{
-
   render() {
     return(
       <svg className="initialAnimation">

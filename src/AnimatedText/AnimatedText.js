@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-
 import classes from "./AnimatedText.module.css";
 
 const AnimatedText = ({ textColor, overlayColor, children, ...props }) => {
