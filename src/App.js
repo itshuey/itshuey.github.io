@@ -3,6 +3,7 @@ import './App.css';
 import { YELLOW, RED, GREEN } from './constants.js';
 import HomePage from './pages/HomePage.js.jsx';
 import AboutMe from './pages/AboutMe.js.jsx';
+import AdditionalInfo from './pages/AdditionalInfo.js.jsx';
 import sixteenHours from './media/16hours.mp4';
 
 class App extends React.Component {
@@ -28,7 +29,7 @@ class App extends React.Component {
           <AboutMe />
       </div>
       <div className="content" style={{ backgroundColor: "black"}}>
-        <video controls="controls" src={sixteenHours} />
+          <AdditionalInfo />
       </div>
       <div className="content" style={{ backgroundColor: "black"}}>
         <div className="App-intro">
@@ -37,6 +38,9 @@ class App extends React.Component {
             selected projects
           </p>
         </div>
+      </div>
+      <div className="content" style={{ backgroundColor: "black"}}>
+        <video controls="controls" src={sixteenHours} />
       </div>
     </div>
     );

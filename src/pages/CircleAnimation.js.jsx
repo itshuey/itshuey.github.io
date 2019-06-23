@@ -1,5 +1,6 @@
 import React from "react";
 import { RED, YELLOW, BROWN, GREEN } from '../constants.js';
+import './CircleAnimation.css';
 
 class CircleAnimation extends React.Component{
   render() {
@@ -11,7 +12,7 @@ class CircleAnimation extends React.Component{
         <circle className="dotAnimation yellowdot" cx="250" cy="55%" fill={YELLOW} />
       </svg>
     )
-  }
+  };
 }
 
 export default CircleAnimation;

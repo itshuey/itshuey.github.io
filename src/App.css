@@ -57,57 +57,6 @@ h1, .App-intro {
   min-height: 100vh;
 }
 
-.icon{
-  width: 30px;
-  height: 30px;
-  padding: 5px;
-}
-
-.aboutMePage{
-  display: block;
-}
-
-.icon{
-  padding: 5px;
-}
-
-.icon:hover {
-  animation: shake 0.4s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-.column {
-  flex: 50%;
-}
-
-.smallColumn {
-  flex: 25%;
-}
-
-.photo{
-  position: absolute;
-  transform: rotate(10deg);
-  left: 30px;
-}
-
-.selfie{
-  width: 400px;
-}
-
 .content {
   min-height: 100vh;
   display: flex;
@@ -120,58 +69,4 @@ h1, .App-intro {
 
 .App-link {
   color: #61dafb;
-}
-
-.dotAnimation {
-  position: fixed;
-  animation-name: dotShrink;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-fill-mode:forwards;
-}
-
-.reddot {
-  animation-delay: 3.15s;
-  animation-duration: 0.7s;
-}
-
-.yellowdot {
-  animation-delay: 3.0s;
-  animation-duration: 0.7s;
-}
-
-.greendot {
-  animation-delay: 3.3s;
-  animation-duration: 0.6s;
-}
-
-.browndot {
-  animation-delay: 3.45s;
-  animation-duration: 0.6s;
-}
-
-.initialAnimation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-@keyframes dotShrink {
-    from {
-        r: 1800;
-    }
-    to {
-        r: 24;
-    }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

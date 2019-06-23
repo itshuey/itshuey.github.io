@@ -1,9 +1,11 @@
 import React from "react";
 import '../App.css';
+import './AboutMe.css'
 import { RED, YELLOW, BROWN, GREEN } from '../constants.js';
 import { AnimatedText } from "../AnimatedText";
 import Zoom from 'react-reveal/Zoom';
 import selfie from '../media/polaroid.jpg';
+import family from '../media/family.jpg';
 import soundcloud from '../media/soundcloud.png';
 import facebook from '../media/facebook.png';
 import instagram from '../media/instagram.png';
@@ -60,8 +62,13 @@ class AboutMe extends React.Component{
     return (
       <div className="aboutMePage">
       <div className="smallColumn">
+        <div className="photo2">
+          <Zoom right>
+          {this.state.renderSelfie && false && <img src={family} className="family"/>}
+          </Zoom>
+        </div>
         <div className="photo">
-          <Zoom left>
+          <Zoom left delay={1000}>
           {this.state.renderSelfie && <img src={selfie} className="selfie"/>}
           </Zoom>
         </div>

@@ -6,7 +6,6 @@ const AnimatedText = ({ textColor, overlayColor, children, ...props }) => {
   const initialMousePos = { x: 0, y: 0 };
 
   const [mousePos, setMousePos] = useState(initialMousePos);
-
   const handleMouseMove = event => {
     event = event.nativeEvent;
     const elem = containerElem.current;
@@ -20,8 +19,6 @@ const AnimatedText = ({ textColor, overlayColor, children, ...props }) => {
   };
 
   const handleMouseOut = () => setMousePos(initialMousePos);
-
-
 
   return (
     <section
