@@ -1,0 +1,56 @@
+.animatedTextContainer {
+  --maskX: 0;
+  --maskY: 0;
+  position: relative;
+  cursor: default;
+  user-select:none;
+}
+
+.animatedTextContent {
+  color: #fff;
+  font-size: 66px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 450;
+  line-height: 1.1;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+.animatedTextContentParagraph {
+  color: #fff;
+  font-size: 26px;
+  font-family: 'Roboto';
+  font-weight: 450;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.animatedTextContentClone {
+  composes: animatedTextContent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffffff;
+  transition: all 0.4s ease-out;
+  clip-path: polygon(
+    0 0,
+    calc(var(--maskX) * 1% + (var(--maskY) - 50) * 0.4%) 0,
+    calc(var(--maskX) * 1% + (var(--maskY) - 50) * -0.4%) 100%,
+    0 100%
+  );
+}
+
+.animatedTextContentParagraphClone {
+  composes: animatedTextContentParagraph;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffffff;
+  transition: all 0.4s ease-out;
+  clip-path: polygon(
+    0 0,
+    calc(var(--maskX) * 1% + (var(--maskY) - 50) * 0.4%) 0,
+    calc(var(--maskX) * 1% + (var(--maskY) - 50) * -0.4%) 100%,
+    0 100%
+  );
+}
