@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
-import CircleAnimation from './CircleAnimation.js.jsx'
-import { YELLOW, RED, GREEN } from './constants.js'
-import HomePage from './HomePage.js.jsx'
-import Example from './Example.js.jsx'
+import CircleAnimation from './CircleAnimation.js.jsx';
+import { YELLOW, RED, GREEN } from './constants.js';
+import HomePage from './HomePage.js.jsx';
+import Example from './Example.js.jsx';
 import Typist from 'react-typist';
-import sixteenHours from './media/16hours.mp4'
-import { AnimatedText } from "./AnimatedText";
+import sixteenHours from './media/16hours.mp4';
+
+import AboutMe from './AboutMe.js.jsx';
 import './App.css';
 
 class App extends React.Component {
@@ -39,20 +40,7 @@ class App extends React.Component {
     return (
     <div>
       <div className="content" style={{ backgroundColor: this.state.backgroundColor}}>
-      <div className="blacklayer" />
-        <div className="App-intro">
-          <AnimatedText
-            textColor={"white"}
-            overlayColor={GREEN}
-          >
-          about me
-          <p className="desc">
-            senior at pomona college <br />
-            studying math and cs <br />
-            into film & design
-          </p>
-          </AnimatedText>
-        </div>
+          <AboutMe />
       </div>
       <div className="content" style={{ backgroundColor: this.state.backgroundColor}}>
         <video controls="controls" src={sixteenHours} />
