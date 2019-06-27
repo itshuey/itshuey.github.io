@@ -8,6 +8,7 @@ class AdditionalInfo extends React.Component{
     return (
       <div>
         <p className="desc" style={{color:"white"}}>
+          Hey, I'm Huey.<br />
           I was born in Singapore,<br />
           and grew up in Sunnyvale, CA.<br />
         </p>

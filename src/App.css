@@ -70,3 +70,55 @@ h1, .App-intro {
 .App-link {
   color: #61dafb;
 }
+
+.blacklayer{
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 50.0;
+}
+
+.overlay {
+  color: transparent;
+  font-size: 140px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 450;
+  z-index: 2;
+  position: absolute;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fbba00;
+  opacity: 100.0;
+}
+
+.overlayDesc{
+  color: #fbba00;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: normal;
+  line-height: normal;
+  -webkit-text-stroke-width: 0px;
+  margin: 0px;
+}
+
+/* .underline {
+  text-decoration: underline;
+  -webkit-text-decoration-stroke: 1px;
+  -webkit-text-decoration-color: #fbba00;
+  text-decoration-color: rgba(251, 186, 0, 0.3);
+} */
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}

@@ -21,14 +21,14 @@ class AboutMe extends React.Component{
       csFontColor: "white",
       filmFontColor: "white",
       designFontColor: "white",
-      renderSelfie: false,
+      renderPictures: false,
     };
   }
 
   iconsUnlocked(){
     return (this.state.pomFontColor == GREEN && this.state.mathFontColor == GREEN &&
             this.state.csFontColor == GREEN && this.state.designFontColor == GREEN &&
-            this.state.renderSelfie);
+            this.state.renderPictures);
   }
 
   render() {
@@ -60,26 +60,22 @@ class AboutMe extends React.Component{
     );
 
     return (
-      <div className="aboutMePage">
-      <div className="smallColumn">
-        <div className="photo2">
-          <Zoom right>
-          {this.state.renderSelfie && false && <img src={family} className="family"/>}
-          </Zoom>
-        </div>
-        <div className="photo">
-          <Zoom left delay={1000}>
-          {this.state.renderSelfie && <img src={selfie} className="selfie"/>}
-          </Zoom>
-        </div>
-
+    <div className="aboutMePage">
+      <div className="photo2">
+        <Zoom right appear={true} when={this.state.renderPictures}>
+          <img src={family} className="family"/>
+        </Zoom>
       </div>
-      <div className="column">
+      <div className="photo">
+        <Zoom left delay={1000} appear={true} when={this.state.renderPictures}>
+          <img src={selfie} className="selfie"/>
+        </Zoom>
+      </div>
       <AnimatedText
         textColor={"white"}
         overlayColor={GREEN}
       >
-      &nbsp;&nbsp;about <span onMouseEnter={() => this.setState({ renderSelfie: true })}><u>me</u></span>&nbsp;&nbsp;
+        &nbsp;&nbsp;about <span onMouseEnter={() => this.setState({ renderPictures: true })}><u>me</u></span>&nbsp;&nbsp;
       </AnimatedText>
       <p className="desc">
         senior at
@@ -108,7 +104,6 @@ class AboutMe extends React.Component{
                 > design</span> <br />
       </p>
       {this.iconsUnlocked() && iconBar}
-      </div>
     </div>
     )
   }

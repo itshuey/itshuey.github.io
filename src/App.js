@@ -3,6 +3,7 @@ import './App.css';
 import { YELLOW, RED, GREEN } from './constants.js';
 import HomePage from './pages/HomePage.js.jsx';
 import AboutMe from './pages/AboutMe.js.jsx';
+import MeshAnimation from './Mesh/MeshAnimation.js';
 import AdditionalInfo from './pages/AdditionalInfo.js.jsx';
 import sixteenHours from './media/16hours.mp4';
 
@@ -29,7 +30,17 @@ class App extends React.Component {
           <AboutMe />
       </div>
       <div className="content" style={{ backgroundColor: "black"}}>
-          <AdditionalInfo />
+        <div className="blacklayer">
+          <MeshAnimation />
+        </div>
+        <div className="overlay">
+          <span className="underline">art</span>&design
+          <p className="overlayDesc">
+            simplex and noise algorithms by stefan gustavon & optimized at stanford <br />
+            adapted for javascript by joseph gentle, and implemented via react by huey sun (2019)<br />
+            welcome to a wavy future of <b>math</b> driven art.
+          </p>
+        </div>
       </div>
       <div className="content" style={{ backgroundColor: "black"}}>
         <div className="App-intro">

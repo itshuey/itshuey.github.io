@@ -13,14 +13,6 @@
   animation-iteration-count: infinite;
 }
 
-.column {
-  flex: 50%;
-}
-
-.smallColumn {
-  flex: 25%;
-}
-
 .photo{
   position: absolute;
   transform: rotate(10deg);
@@ -30,7 +22,7 @@
 .photo2{
   position: absolute;
   transform: rotate(-5deg);
-  left: 20px;
+  right: 30px;
 }
 
 .selfie{
