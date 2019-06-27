@@ -60,7 +60,7 @@ class AboutMe extends React.Component{
     );
 
     return (
-    <div className="aboutMePage">
+    <div className="content">
       <div className="photo2">
         <Zoom right appear={true} when={this.state.renderPictures}>
           <img src={family} className="family"/>
