@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { YELLOW, RED, GREEN } from './constants.js';
 import { Carousel } from 'react-responsive-carousel';
+import Slider from "react-slick";
 import HomePage from './pages/HomePage.js.jsx';
 import AboutMe from './pages/AboutMe.js.jsx';
 import ArtDesign from './pages/ArtDesign.js.jsx';
@@ -29,12 +30,14 @@ class App extends React.Component {
 
   render(){
     const settings = {
-      showStatus: false,
-      showThumbs: false,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true
     };
     return (
       <div className="App">
-      <Carousel {...settings}>
+      <Slider {...settings}>
         <div>
           <div className="content" style={{ backgroundColor: this.state.backgroundColor}}>
             <HomePage onTypingDone={() => this.loadingFunctions()}/>
@@ -46,7 +49,12 @@ class App extends React.Component {
         <div>
             <ArtDesign />
         </div>
-      </Carousel>
+        <div>
+          <div className="content" > hi </div>
+          <div className="content" > hi </div>
+          <div className="content" > hi </div>
+        </div>
+      </Slider>
     </div>
     );
   }
