@@ -33,26 +33,26 @@ class AboutMe extends React.Component{
 
   render() {
     let iconBar = (
-      <div className="smallColumn">
+      <div>
         <div className="icons">
-          <Zoom top delay={100}>
+          <Zoom top delay={100} appear={true} when={this.iconsUnlocked()}>
             <a href="https://www.facebook.com/hueey1">
-              <img src={facebook} className="icon"/>
+              <img src={facebook} className="icon hover animation"/>
             </a>
           </Zoom>
-          <Zoom top delay={300}>
+          <Zoom top delay={300} appear={true} when={this.iconsUnlocked()}>
             <a href="https://soundcloud.com/hueywastaken/">
-              <img src={soundcloud} className="icon" />
+              <img src={soundcloud} className="icon hover animation" />
             </a>
           </Zoom>
-          <Zoom top delay={500}>
+          <Zoom top delay={500} appear={true} when={this.iconsUnlocked()}>
             <a href="https://www.instagram.com/hueywastaken/">
-              <img src={instagram} className="icon" />
+              <img src={instagram} className="icon hover animation" />
             </a>
           </Zoom>
-          <Zoom top delay={700}>
+          <Zoom top delay={700} appear={true} when={this.iconsUnlocked()}>
             <a href="mailto:hssa2016@pomona.edu">
-              <img src={email} className="icon" />
+              <img src={email} className="icon hover animation" />
             </a>
           </Zoom>
         </div>
@@ -103,7 +103,7 @@ class AboutMe extends React.Component{
                 onMouseEnter={() => this.setState({ designFontColor: GREEN })}
                 > design</span> <br />
       </p>
-      {this.iconsUnlocked() && iconBar}
+      {iconBar}
     </div>
     )
   }

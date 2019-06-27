@@ -1,7 +1,11 @@
 .icon{
-  width: 30px;
-  height: 30px;
+  max-width: 40px;
+  max-height: 40px;
   padding: 5px;
+}
+
+.icon.hover.animation{
+  pointer-events: all;
 }
 
 .aboutMePage{
@@ -11,6 +15,7 @@
 .icon:hover {
   animation: shake 0.4s;
   animation-iteration-count: infinite;
+  pointer-events: all;
 }
 
 .photo{
@@ -26,11 +31,11 @@
 }
 
 .selfie{
-  width: 400px;
+  max-width: 400px;
 }
 
 .family{
-  width: 400px;
+  max-width: 400px;
 }
 
 @keyframes shake {
