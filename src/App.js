@@ -8,7 +8,7 @@ import ArtDesign from './pages/ArtDesign.js.jsx';
 import MeshAnimation from './Mesh/MeshAnimation.js';
 import AdditionalInfo from './pages/AdditionalInfo.js.jsx';
 import sixteenHours from './media/16hours.mp4';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 
 class App extends React.Component {
@@ -31,20 +31,25 @@ class App extends React.Component {
     const settings = {
       showStatus: false,
       showThumbs: false,
+      dynamicHeight: true,
     };
     return (
       <div className="App">
       <Carousel {...settings}>
-        <div>
+        <div name="slide">
           <div className="content" style={{ backgroundColor: this.state.backgroundColor}}>
             <HomePage onTypingDone={() => this.loadingFunctions()}/>
           </div>
         </div>
-        <div>
+        <div name="slide">
             <AboutMe />
         </div>
-        <div>
+        <div name="slide">
             <ArtDesign />
+        </div>
+        <div name="slide">
+          <div className="content"><h1>hi</h1></div>
+          <div className="content"><h1>hi</h1></div>
         </div>
       </Carousel>
     </div>
