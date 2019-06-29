@@ -25,7 +25,7 @@ class AboutMe extends React.Component{
     };
   }
 
-  iconsUnlocked(){
+  iconsUnlocked() {
     return (this.state.pomFontColor == GREEN && this.state.mathFontColor == GREEN &&
             this.state.csFontColor == GREEN && this.state.designFontColor == GREEN &&
             this.state.renderPictures);

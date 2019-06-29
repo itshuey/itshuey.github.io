@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^1.11.0",
+    "huey-website-carousel": "file:../misc/huey-website-carousel",
     "typescript": "^3.5.2"
   }
 }

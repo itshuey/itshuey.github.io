@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 import { YELLOW, RED, GREEN } from './constants.js';
-import { Carousel } from 'react-responsive-carousel';
 import HomePage from './pages/HomePage.js.jsx';
 import AboutMe from './pages/AboutMe.js.jsx';
 import ArtDesign from './pages/ArtDesign.js.jsx';
-import MeshAnimation from './Mesh/MeshAnimation.js';
+import Projects from './pages/Projects.js.jsx'
 import AdditionalInfo from './pages/AdditionalInfo.js.jsx';
 import sixteenHours from './media/16hours.mp4';
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'huey-website-carousel'
+import 'huey-website-carousel/lib/styles/carousel.min.css'
 
 
 class App extends React.Component {
@@ -42,14 +42,13 @@ class App extends React.Component {
           </div>
         </div>
         <div name="slide">
-            <AboutMe />
+          <AboutMe />
         </div>
         <div name="slide">
-            <ArtDesign />
+          <ArtDesign />
         </div>
-        <div name="slide">
-          <div className="content"><h1>hi</h1></div>
-          <div className="content"><h1>hi</h1></div>
+        <div name="resizable slide">
+          <Projects />
         </div>
       </Carousel>
     </div>
