@@ -10,6 +10,16 @@
   padding-top: 80px;
 }
 
+.title {
+  width: 100%;
+  position: absolute;
+  font-family: 'Roboto Mono', monospace;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fbba00;
+  color: transparent;
+  top: 0px;
+}
+
 .overlay {
   color: transparent;
   font-size: 140px;
@@ -19,7 +29,8 @@
   position: absolute;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fbba00;
-  opacity: 100.0;
+  height: 100%;
+  top: 35%;
 }
 
 .overlayDesc{
@@ -53,21 +64,25 @@
   border: 2px solid black;
 }
 
+.reveal:focus {
+  outline: none;
+}
+
 .design {
   animation-name: appear;
   animation-duration: 4s;
-  position: fixed;
-  top: 25px;
+  position: absolute;
+  top: 10px;
   right: 45px;
   font-size: 50px;
 }
 
 .art {
   animation-name: shrinkText;
-  animation-duration: 1.5s;
-  position: fixed;
+  animation-duration: 1s;
   animation-fill-mode:forwards;
-  top: 25px;
+  position:absolute;
+  top: 10px;
   left: 45px;
 }
 

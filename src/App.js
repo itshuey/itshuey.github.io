@@ -37,16 +37,16 @@ class App extends React.Component {
     return (
       <div className="App">
       <Carousel {...settings}>
-        <div name="resizable slide">
-          <ArtDesign />
-        </div>
         <div name="slide">
           <div className="content" style={{ backgroundColor: this.state.backgroundColor}}>
-            <Projects />
+            <HomePage onTypingDone={() => this.loadingFunctions()} />
           </div>
         </div>
         <div name="slide">
           <AboutMe />
+        </div>
+        <div name="resizable slide">
+          <ArtDesign />
         </div>
         <div name="slide">
           <Projects />

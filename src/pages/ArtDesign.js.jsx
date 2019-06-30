@@ -35,16 +35,24 @@ class ArtDesign extends React.Component{
       </div>
     )
 
+    let animatedTitle = (
+      <div className={"title"}>
+        <span className={"art"}>art</span>
+        <span className={"design"}>&design</span>
+      </div>
+    )
+
     return (
     <div>
     <div className="content">
+      {!this.state.showTitle && animatedTitle}
       <LightSpeed top when={this.state.showTitle}>
         <div className="meshLayer">
-        <MeshAnimation />
+          <MeshAnimation />
         </div>
       </LightSpeed>
       <div className="overlay">
-        <span className={!this.state.showTitle && "art"}>art</span><span className={!this.state.showTitle && "design"}>&design</span>
+        {this.state.showTitle && "art&design"}
         <Fade bottom when={this.state.showTitle}>
         <p className="overlayDesc">
           simplex and noise algorithms by stefan gustavon & optimized at stanford <br />
@@ -55,7 +63,7 @@ class ArtDesign extends React.Component{
         {!this.state.showTitle && this.renderItems()}
       </div>
       <button className="reveal" onClick={() => this.setState({ showTitle: !this.state.showTitle })}>
-        <b>&nbsp;Gallery&nbsp;</b>
+        {this.state.showTitle ? <b>&nbsp;Gallery&nbsp;</b> : <b>&nbsp;Back&nbsp;</b>}
       </button>
     </div>
     {!this.state.showTitle && comingSoon}
