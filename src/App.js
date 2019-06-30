@@ -6,7 +6,6 @@ import AboutMe from './pages/AboutMe.js.jsx';
 import ArtDesign from './pages/ArtDesign.js.jsx';
 import Projects from './pages/Projects.js.jsx'
 import AdditionalInfo from './pages/AdditionalInfo.js.jsx';
-import sixteenHours from './media/16hours.mp4';
 import { Carousel } from 'huey-website-carousel'
 import 'huey-website-carousel/lib/styles/carousel.min.css'
 
@@ -33,21 +32,23 @@ class App extends React.Component {
       showThumbs: false,
       dynamicHeight: true,
     };
+    let saved = <HomePage onTypingDone={() => this.loadingFunctions()}/>;
+
     return (
       <div className="App">
       <Carousel {...settings}>
+        <div name="resizable slide">
+          <ArtDesign />
+        </div>
         <div name="slide">
           <div className="content" style={{ backgroundColor: this.state.backgroundColor}}>
-            <HomePage onTypingDone={() => this.loadingFunctions()}/>
+            <Projects />
           </div>
         </div>
         <div name="slide">
           <AboutMe />
         </div>
         <div name="slide">
-          <ArtDesign />
-        </div>
-        <div name="resizable slide">
           <Projects />
         </div>
       </Carousel>
