@@ -1,5 +1,6 @@
 import React from "react";
 import '../App.css';
+import './Projects.css';
 import { RED, YELLOW, BROWN, GREEN } from '../constants.js';
 
 
@@ -13,18 +14,17 @@ class Projects extends React.Component{
 
   render() {
     let extension = (
-      <div className="content">
-        <h1> P2 </h1>
+      <div className={"content"}>
+        <div className={"title"}> Projects </div>
       </div>
     )
 
     return(
       <div>
-        <div className="content">
-          <h1> P1 </h1>
-          <button onClick={() => this.setState({ extend: !this.state.extend })}> Extend! </button>
+        <div className={"content"}>
+          <div className={"placeholder"} />
+          <br /><br />projects page in work...
         </div>
-        {this.state.extend && extension}
       </div>
     );
   }
