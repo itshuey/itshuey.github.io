@@ -65,7 +65,7 @@ class ArtDesign extends React.Component{
         </Fade>
       </div>
       <button className="reveal" onClick={() => this.setState({ showTitle: !this.state.showTitle, ready: false })}>
-        {this.state.showTitle ? <b>&nbsp;Gallery&nbsp;</b> : <b>&nbsp;Back&nbsp;</b>}
+        {this.state.showTitle ? <b>&nbsp;&nbsp;Gallery&nbsp;&nbsp;</b> : <b>&nbsp;&nbsp;Back&nbsp;&nbsp;</b>}
       </button>
     </div>
     {!this.state.showTitle && comingSoon}

@@ -55,11 +55,11 @@
   bottom: 100px;
   background-color: transparent;
   color: #fbba00;
-  border: 2px solid #fbba00; /* Green */
+  border: 2px solid #fbba00; 
 }
 
 .reveal:hover {
-  background-color: #fbba00; /* Green */
+  background-color: #fbba00;
   color: black;
   border: 2px solid black;
 }

@@ -32,7 +32,10 @@ class App extends React.Component {
       showThumbs: false,
       dynamicHeight: true,
     };
-    let saved = <HomePage onTypingDone={() => this.loadingFunctions()}/>;
+    let saved = (
+      <div className="content" style={{ backgroundColor: this.state.backgroundColor}}>
+        <HomePage onTypingDone={() => this.loadingFunctions()} />
+      </div>);
 
     return (
       <div className="App">
