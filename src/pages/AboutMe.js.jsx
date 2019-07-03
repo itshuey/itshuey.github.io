@@ -22,6 +22,8 @@ class AboutMe extends React.Component{
       filmFontColor: "white",
       designFontColor: "white",
       renderPictures: false,
+      renderTitle: true,
+      showMore: false,
     };
   }
 
@@ -29,6 +31,20 @@ class AboutMe extends React.Component{
     return (this.state.pomFontColor == GREEN && this.state.mathFontColor == GREEN &&
             this.state.csFontColor == GREEN && this.state.designFontColor == GREEN &&
             this.state.renderPictures);
+  }
+
+  renderTitle() {
+    return (
+      <div className={"content"}>
+        <div className={"overlay3"}>
+          about me!
+        </div>
+        <button className="reveal3" onClick={() => this.setState({ renderTitle: false })}>
+          <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let's go&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+        </button>
+      </div>
+    )
+
   }
 
   render() {
@@ -59,53 +75,61 @@ class AboutMe extends React.Component{
       </div>
     );
 
-    return (
-    <div className="content">
-      <div className="photo2">
-        <Zoom right appear={true} when={this.state.renderPictures}>
-          <img src={family} className="family"/>
-        </Zoom>
-      </div>
-      <div className="photo">
-        <Zoom left delay={1000} appear={true} when={this.state.renderPictures}>
-          <img src={selfie} className="selfie"/>
-        </Zoom>
-      </div>
-      <AnimatedText
-        textColor={"white"}
-        overlayColor={GREEN}
-      >
-        &nbsp;&nbsp;about <span onMouseEnter={() => this.setState({ renderPictures: true })}><u>me</u></span>&nbsp;&nbsp;
-      </AnimatedText>
-      <p className="desc">
-        senior at
-            <span
-              style={{ color: this.state.pomFontColor }}
-              onMouseEnter={() => this.setState({ pomFontColor: GREEN })}
-              > <b>pomona college</b><br />
-            </span>
-        studying
-            <span
-              style={{ color: this.state.mathFontColor }}
-              onMouseEnter={() => this.setState({ mathFontColor: GREEN })}
-              > math</span> and
-            <span
-              style={{ color: this.state.csFontColor }}
-              onMouseEnter={() => this.setState({ csFontColor: GREEN })}
-              > cs</span> <br />
-        into
-            <span
-              style={{ color: this.state.filmFontColor }}
-              onMouseEnter={() => this.setState({ filmFontColor: "white" })}
-              > film</span> &
+    let mainPage = (
+      <div className="content">
+        <div className="photo2">
+          <Zoom right appear={true} when={this.state.renderPictures}>
+            <img src={family} className="family"/>
+          </Zoom>
+        </div>
+        <div className="photo">
+          <Zoom left delay={1000} appear={true} when={this.state.renderPictures}>
+            <img src={selfie} className="selfie"/>
+          </Zoom>
+        </div>
+        <AnimatedText
+          textColor={"white"}
+          overlayColor={GREEN}
+        >
+          &nbsp;&nbsp;about <span onMouseEnter={() => this.setState({ renderPictures: true })}><u>me</u></span>&nbsp;&nbsp;
+        </AnimatedText>
+        <p className="desc">
+          senior at
               <span
-                style={{ color: this.state.designFontColor }}
-                onMouseEnter={() => this.setState({ designFontColor: GREEN })}
-                > design</span> <br />
-      </p>
-      {iconBar}
-    </div>
-    )
+                style={{ color: this.state.pomFontColor }}
+                onMouseEnter={() => this.setState({ pomFontColor: GREEN })}
+                > <b>pomona college</b><br />
+              </span>
+          studying
+              <span
+                style={{ color: this.state.mathFontColor }}
+                onMouseEnter={() => this.setState({ mathFontColor: GREEN })}
+                > math</span> and
+              <span
+                style={{ color: this.state.csFontColor }}
+                onMouseEnter={() => this.setState({ csFontColor: GREEN })}
+                > cs</span> <br />
+          into
+              <span
+                style={{ color: this.state.filmFontColor }}
+                onMouseEnter={() => this.setState({ filmFontColor: "white" })}
+                > film</span> &
+                <span
+                  style={{ color: this.state.designFontColor }}
+                  onMouseEnter={() => this.setState({ designFontColor: GREEN })}
+                  > design</span> <br />
+        </p>
+        {iconBar}
+        <a className="more link" onClick={() => this.setState({ showMore: true })}>
+          {this.state.showMore ? "in development!" : "more!"}
+        </a>
+        <a className="back link" onClick={() => this.setState({ renderTitle: true })}>
+          back~
+        </a>
+      </div>
+      )
+
+    return this.state.renderTitle ? this.renderTitle() : mainPage;
   }
 }
 
