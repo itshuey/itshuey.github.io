@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.123e4577.chunk.css",
+    "main.js": "/static/js/main.58e92f2e.chunk.js",
+    "main.js.map": "/static/js/main.58e92f2e.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.e675638a.chunk.js": "/static/js/2.e675638a.chunk.js",
+    "static/js/2.e675638a.chunk.js.map": "/static/js/2.e675638a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.caa0d6cddd2010a9324883542155763e.js": "/precache-manifest.caa0d6cddd2010a9324883542155763e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.123e4577.chunk.css.map": "/static/css/main.123e4577.chunk.css.map",
+    "static/media/16hours.mp4": "/static/media/16hours.ea0b7219.mp4",
+    "static/media/audrey.jpg": "/static/media/audrey.6232ffde.jpg",
+    "static/media/family.jpg": "/static/media/family.5267189e.jpg",
+    "static/media/instagram.png": "/static/media/instagram.1bd6397d.png",
+    "static/media/polaroid.jpg": "/static/media/polaroid.86201c04.jpg"
+  }
+}
