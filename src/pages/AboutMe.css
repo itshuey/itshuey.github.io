@@ -38,13 +38,24 @@
   max-width: 400px;
 }
 
-.overlay.green {
+.selected .overlay.green {
   -webkit-text-stroke-color: #007639;
+  animation: flicker 3s infinite;
+  animation-delay: 0.05s;
 }
 
-.overlay.glitch {
+.selected .overlay.glitch2 {
+  top: 34%;
+  left: 22%;
+  animation: flicker 3s infinite;
+
+}
+
+.selected .overlay.glitch1  {
   top: 36%;
-  left: 25%
+  left: 26%;
+  animation: persist 3s infinite;
+  animation-delay: 0.1s;
 }
 
 .reveal.green {
@@ -67,6 +78,18 @@
 
 .more {
   bottom: 50px;
+}
+
+@keyframes flicker {
+  0% { opacity: 1 }
+  33% { opacity: 0 }
+  100% {  opacity: 0 }
+}
+
+@keyframes persist {
+  0% { opacity: 1 }
+  66% { opacity: 1 }
+  100% {  opacity: 0 }
 }
 
 @keyframes shake {

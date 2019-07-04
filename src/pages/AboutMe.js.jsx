@@ -42,6 +42,9 @@ class AboutMe extends React.Component{
         <div className={"overlay green glitch1"}>
           about me!
         </div>
+        <div className={"overlay green glitch2"}>
+          about me!
+        </div>
         <button className="reveal green" onClick={() => this.setState({ renderTitle: false })}>
           <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let's go&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
         </button>
