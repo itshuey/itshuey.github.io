@@ -19,7 +19,7 @@ class Projects extends React.Component{
           <div className={"header"}>
             <b><u>VER II</u></b>
           </div>
-          <div className={"overlay2 neon"}>
+          <div className={"overlay red neon"}>
             projects
           </div>
           <div className={"floating"}>
@@ -28,7 +28,7 @@ class Projects extends React.Component{
             <br />A SELECTED SERIES</i></b>
           </div>
           <div className={"placeholder"} />
-          <button className="reveal2">
+          <button className="reveal red">
             <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SOON!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
           </button>
         </div>

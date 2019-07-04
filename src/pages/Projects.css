@@ -9,20 +9,11 @@
   font-size: 100px;
 }
 
-.overlay2 {
-  color: transparent;
-  font-size: 140px;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 450;
-  z-index: 2;
-  position: absolute;
-  -webkit-text-stroke-width: 1px;
+.overlay.red {
   -webkit-text-stroke-color: #fc2c28;
-  height: 100%;
-  top: 35%;
 }
 
-.selected .overlay2 {
+.selected .overlay.red {
   animation: neon 3s ease-in infinite alternate;
   animation-delay: .5s;
 }
@@ -33,7 +24,6 @@
   top: 290px;
   right: 40%;
   color: #fc2c28;
-
 }
 
 .floating {
@@ -63,29 +53,16 @@
   to { opacity: .3; box-shadow: inset 20px 0 80px #fc2c28; width: 350px; height: 350px;}
 }
 
-.reveal2:hover {
+.reveal.red:hover {
   animation: glow 1s ease-out infinite alternate;
   color: #fc2c28;
 }
 
-
-.reveal2 {
-  z-index: 2;
-  margin: 0 auto;
-  font-size: 20px;
-  font-family: 'Roboto';
-  border-radius: 20px;
-  position: absolute;
+.reveal.red {
   bottom: 250px;
-  background-color: transparent;
   color: black;
   border: 2px solid #fc2c28;
   font-weight: 100;
-}
-
-
-.reveal2:focus {
-  outline: none;
 }
 
 @keyframes glow {

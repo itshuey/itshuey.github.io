@@ -20,17 +20,8 @@
   top: 0px;
 }
 
-.overlay {
-  color: transparent;
-  font-size: 140px;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 450;
-  z-index: 2;
-  position: absolute;
-  -webkit-text-stroke-width: 1px;
+.overlay.yellow {
   -webkit-text-stroke-color: #fbba00;
-  height: 100%;
-  top: 35%;
 }
 
 .overlayDesc {
@@ -45,27 +36,17 @@
   margin: 0px;
 }
 
-.reveal {
-  z-index: 2;
-  margin: 0 auto;
-  font-size: 20px;
-  font-family: 'Roboto';
-  border-radius: 20px;
-  position: absolute;
-  bottom: 100px;
-  background-color: transparent;
+.reveal.yellow{
   color: #fbba00;
   border: 2px solid #fbba00;
+  bottom: 100px;
 }
 
-.reveal:hover {
+
+.reveal.yellow:hover {
   background-color: #fbba00;
   color: black;
   border: 2px solid black;
-}
-
-.reveal:focus {
-  outline: none;
 }
 
 .design {
@@ -99,11 +80,6 @@
 @keyframes left {
   0%   {right: 20px;}
   100% {right: 400px;}
-}
-
-.fuck {
-  height: 100vh;
-  position: absolute;
 }
 
 /* .underline {

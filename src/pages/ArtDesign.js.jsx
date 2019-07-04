@@ -54,7 +54,7 @@ class ArtDesign extends React.Component{
       </LightSpeed>
       {!this.state.showTitle && this.triggerReveal()}
       {this.state.ready && !this.state.showTitle && this.renderItems()}
-      <div className="overlay">
+      <div className="overlay yellow">
         {this.state.showTitle && "art&design"}
         <Fade bottom when={this.state.showTitle} unmountOnExit={true}>
         <p className="overlayDesc">
@@ -64,7 +64,7 @@ class ArtDesign extends React.Component{
         </p>
         </Fade>
       </div>
-      <button className="reveal" onClick={() => this.setState({ showTitle: !this.state.showTitle, ready: false })}>
+      <button className="reveal yellow" onClick={() => this.setState({ showTitle: !this.state.showTitle, ready: false })}>
         {this.state.showTitle ? <b>&nbsp;&nbsp;Gallery&nbsp;&nbsp;</b> : <b>&nbsp;&nbsp;Back&nbsp;&nbsp;</b>}
       </button>
     </div>

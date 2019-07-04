@@ -1,14 +1,14 @@
-.icon{
+.icon {
   max-width: 40px;
   max-height: 40px;
   padding: 5px;
 }
 
-.icon.hover.animation{
+.icon.hover.animation {
   pointer-events: all;
 }
 
-.aboutMePage{
+.aboutMePage {
   display: block;
 }
 
@@ -18,48 +18,37 @@
   pointer-events: all;
 }
 
-.photo{
+.photo {
   position: absolute;
   transform: rotate(10deg);
   left: 30px;
 }
 
-.photo2{
+.photo2 {
   position: absolute;
   transform: rotate(-5deg);
   right: 30px;
 }
 
-.selfie{
+.selfie {
   max-width: 400px;
 }
 
-.family{
+.family {
   max-width: 400px;
 }
 
-.overlay3 {
-  color: transparent;
-  font-size: 140px;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 450;
-  z-index: 2;
-  position: absolute;
-  -webkit-text-stroke-width: 1px;
+.overlay.green {
   -webkit-text-stroke-color: #007639;
-  height: 100%;
-  top: 35%;
 }
 
-.reveal3 {
-  z-index: 2;
-  margin: 0 auto;
-  font-size: 20px;
-  font-family: 'Roboto';
-  border-radius: 20px;
-  position: absolute;
+.overlay.glitch {
+  top: 36%;
+  left: 25%
+}
+
+.reveal.green {
   bottom: 250px;
-  background-color: transparent;
   color: #007639;
   border: 2px solid #007639;
   font-weight: 100;
