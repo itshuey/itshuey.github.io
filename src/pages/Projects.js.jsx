@@ -1,8 +1,8 @@
 import React from "react";
 import '../App.css';
 import './Projects.css';
+import './Glitch.css'
 import { RED, YELLOW, BROWN, GREEN } from '../constants.js';
-
 
 class Projects extends React.Component{
   constructor(props) {
@@ -16,19 +16,19 @@ class Projects extends React.Component{
     return(
       <div>
         <div className={"content"}>
-          <div className={"header"}>
+          <div className={"header glitch"}>
             <b><u>VER II</u></b>
           </div>
-          <div className={"overlay red neon"}>
+          <div className={"overlay red glitch"}>
             projects
           </div>
-          <div className={"floating"}>
+          <div className={"floating glitch"}>
             <br /><br /><b><i>A SELECTED SERIES
             <br />A SELECTED SERIES
             <br />A SELECTED SERIES</i></b>
           </div>
           <div className={"placeholder"} />
-          <button className="reveal red">
+          <button className="reveal red glitch">
             <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SOON!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
           </button>
         </div>
