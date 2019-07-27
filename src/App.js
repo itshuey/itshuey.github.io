@@ -41,9 +41,7 @@ class App extends React.Component {
       <div className="App">
       <Carousel {...settings}>
         <div name="slide">
-          <div className="content" style={{ backgroundColor: this.state.backgroundColor}}>
-            <HomePage onTypingDone={() => this.loadingFunctions()} />
-          </div>
+          <HomePage />
         </div>
         <div name="slide">
           <AboutMe />

@@ -23,8 +23,11 @@ class AboutMe extends React.Component{
       designFontColor: "white",
       renderPictures: false,
       renderTitle: true,
+      renderTransition: false,
       showMore: false,
     };
+
+    this.handleTransition = this.handleTransition.bind(this);
   }
 
   iconsUnlocked() {
@@ -34,8 +37,8 @@ class AboutMe extends React.Component{
   }
 
   renderTitle() {
-    return (
-      <div className={"content"}>
+    let title = (
+      <React.Fragment>
         <div className={"overlay green"}>
           about me!
         </div>
@@ -45,36 +48,64 @@ class AboutMe extends React.Component{
         <div className={"overlay green glitch2"}>
           about me!
         </div>
-        <button className="reveal green" onClick={() => this.setState({ renderTitle: false })}>
+        <button className={"reveal green"} onClick={this.handleTransition}>
           <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let's go&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
         </button>
+      </React.Fragment>
+    );
+
+    let transition = (
+      <div className={"aboutMeTransition"}>
+        <div className={"slideIn right"}>
+          我
+        </div>
+        <div className={"slideIn left"}>
+          wó (me)
+          <div style={{ fontSize: "36px" }}>
+          an interactive page<br/>
+          </div>
+        </div>
       </div>
     )
 
+    return (
+      <Zoom><div>
+        <div className={this.state.renderTransition ? "content fadeToGreen" : "content"}>
+          {this.state.renderTransition ? transition : title }
+        </div>
+      </div></Zoom>
+    )
+  }
+
+  handleTransition() {
+    this.setState({ renderTransition: true });
+    setTimeout(() => {
+      this.setState({ renderTitle: false, renderTransition: false })
+    }, 2000);
   }
 
   render() {
     let iconBar = (
       <div>
-        <div className="icons">
+        <div className={"icons"}>
           <Zoom top delay={100} appear={true} when={this.iconsUnlocked()}>
-            <a href="https://www.facebook.com/hueey1">
-              <img src={facebook} className="icon hover animation"/>
+            <a href={"https://www.facebook.com/hueey1"}>
+              <img src={facebook} className={"icon hover animation"} />
             </a>
           </Zoom>
           <Zoom top delay={300} appear={true} when={this.iconsUnlocked()}>
-            <a href="https://soundcloud.com/hueywastaken/">
-              <img src={soundcloud} className="icon hover animation" />
+            <a href={"https://soundcloud.com/hueywastaken/"}>
+              <img src={soundcloud} className={"icon hover animation"} />
             </a>
           </Zoom>
           <Zoom top delay={500} appear={true} when={this.iconsUnlocked()}>
-            <a href="https://www.instagram.com/hueywastaken/">
-              <img src={instagram} className="icon hover animation" />
+            <a href={"https://www.instagram.com/hueywastaken/"}>
+              <img src={instagram} className={"icon hover animation"} />
             </a>
           </Zoom>
           <Zoom top delay={700} appear={true} when={this.iconsUnlocked()}>
-            <a href="mailto:hssa2016@pomona.edu">
-              <img src={email} className="icon hover animation" />
+            <a href={"mailto:hssa2016@pomona.edu"}>
+              <img src={email} className={"icon hover animation"} />
             </a>
           </Zoom>
         </div>
@@ -83,28 +114,30 @@ class AboutMe extends React.Component{
 
     let mainPage = (
       <div className="content">
-        <div className="photo2">
+        <div className={"photo2"}>
           <Zoom right appear={true} when={this.state.renderPictures}>
-            <img src={family} className="family"/>
+            <img src={family} className={"family"}/>
           </Zoom>
         </div>
-        <div className="photo">
+        <div className={"photo"}>
           <Zoom left delay={1000} appear={true} when={this.state.renderPictures}>
-            <img src={selfie} className="selfie"/>
+            <img src={selfie} className={"selfie"}/>
           </Zoom>
         </div>
-        <AnimatedText
-          textColor={"white"}
-          overlayColor={GREEN}
-        >
-          &nbsp;&nbsp;about <span onMouseEnter={() => this.setState({ renderPictures: true })}><u>me</u></span>&nbsp;&nbsp;
+        <Zoom>
+        <AnimatedText textColor={"white"} overlayColor={GREEN}>
+          &nbsp;&nbsp;about&nbsp;
+          <span onMouseEnter={() => this.setState({ renderPictures: true })}>
+              <u>me</u>
+          </span>
+          &nbsp;&nbsp;
         </AnimatedText>
-        <p className="desc">
+        <p className={"desc"}>
           senior at
               <span
                 style={{ color: this.state.pomFontColor }}
                 onMouseEnter={() => this.setState({ pomFontColor: GREEN })}
-                > <b>pomona college</b><br />
+              > <b>pomona college</b><br />
               </span>
           studying
               <span
@@ -125,11 +158,12 @@ class AboutMe extends React.Component{
                   onMouseEnter={() => this.setState({ designFontColor: GREEN })}
                   > design</span> <br />
         </p>
+        </Zoom>
         {iconBar}
-        <a className="more link" onClick={() => this.setState({ showMore: true })}>
+        <a className={"more link"} onClick={() => this.setState({ showMore: true })}>
           {this.state.showMore ? "in development!" : "more!"}
         </a>
-        <a className="back link" onClick={() => this.setState({ renderTitle: true })}>
+        <a className={"back link"} onClick={() => this.setState({ renderTitle: true })}>
           back~
         </a>
       </div>

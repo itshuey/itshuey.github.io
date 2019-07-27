@@ -12,6 +12,50 @@
   display: block;
 }
 
+.aboutMeTransition {
+  top: 0px;
+  position: absolute;
+  width: 100vw;
+  color: white;
+  z-index: 3;
+}
+
+.slideIn{
+  position: absolute;
+  opacity: 0;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.slideIn.right{
+  top: -90px;
+  font-size: 800px;
+  animation: slideInRight 0.9s;
+  animation-direction: alternate;
+  animation-delay: .3s;
+  animation-iteration-count: 2;
+}
+
+.slideIn.left{
+  top: 500px;
+  animation: slideInLeft 0.7s;
+  font-size: 70px;
+  animation-direction: alternate;
+  animation-delay: .5s;
+  animation-iteration-count: 2;
+}
+
+.fadeToGreen {
+  animation: fadeInAndOut 1.6s;
+  animation-fill-mode: forwards;
+}
+
+.fadeOut {
+  animation: fadeInAndOut 1.6s;
+  animation-fill-mode: forwards;
+}
+
 .icon:hover {
   animation: shake 0.4s;
   animation-iteration-count: infinite;
@@ -48,7 +92,6 @@
   top: 34%;
   left: 22%;
   animation: flicker 3s infinite;
-
 }
 
 .selected .overlay.glitch1  {
@@ -78,6 +121,25 @@
 
 .more {
   bottom: 50px;
+}
+
+@keyframes slideInRight {
+  0% { right : 0px; opacity: 0 }
+  70% { right : 100px; opacity: 1 }
+  100% { right : 100px; opacity: 1 }
+}
+
+@keyframes slideInLeft {
+  0% { left : 0px; opacity: 0 }
+  70% { left : 200px; opacity: 1 }
+  100% { left : 200px; opacity: 1 }
+}
+
+@keyframes fadeInAndOut {
+  0% { background-color: black }
+  20% { background-color: #007639 }
+  80% { background-color: #007639 }
+  100% { background-color: black }
 }
 
 @keyframes flicker {
