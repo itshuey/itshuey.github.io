@@ -24,6 +24,7 @@ class AboutMe extends React.Component{
       renderPictures: false,
       renderTitle: true,
       renderTransition: false,
+      hideMain: false,
       showMore: false,
     };
 
@@ -71,7 +72,7 @@ class AboutMe extends React.Component{
     return (
       <Zoom><div>
         <div className={this.state.renderTransition ? "content fadeToGreen" : "content"}>
-          {this.state.renderTransition ? transition : title }
+          {this.state.hideMain ? transition : title }
         </div>
       </div></Zoom>
     )
@@ -80,8 +81,11 @@ class AboutMe extends React.Component{
   handleTransition() {
     this.setState({ renderTransition: true });
     setTimeout(() => {
+      this.setState({ hideMain: true })
+    }, 200);
+    setTimeout(() => {
       this.setState({ renderTitle: false, renderTransition: false })
-    }, 2000);
+    }, 2200);
   }
 
   render() {
@@ -163,7 +167,7 @@ class AboutMe extends React.Component{
         <a className={"more link"} onClick={() => this.setState({ showMore: true })}>
           {this.state.showMore ? "in development!" : "more!"}
         </a>
-        <a className={"back link"} onClick={() => this.setState({ renderTitle: true })}>
+        <a className={"back link"} onClick={() => this.setState({ renderTitle: true, hideMain: false })}>
           back~
         </a>
       </div>
