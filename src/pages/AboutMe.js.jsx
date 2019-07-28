@@ -85,7 +85,7 @@ class AboutMe extends React.Component{
     }, 200);
     setTimeout(() => {
       this.setState({ renderTitle: false, renderTransition: false })
-    }, 2200);
+    }, 2900);
   }
 
   render() {
@@ -93,22 +93,22 @@ class AboutMe extends React.Component{
       <div>
         <div className={"icons"}>
           <Zoom top delay={100} appear={true} when={this.iconsUnlocked()}>
-            <a href={"https://www.facebook.com/hueey1"}>
+            <a href={this.iconsUnlocked() && "https://www.facebook.com/hueey1"}>
               <img src={facebook} className={"icon hover animation"} />
             </a>
           </Zoom>
           <Zoom top delay={300} appear={true} when={this.iconsUnlocked()}>
-            <a href={"https://soundcloud.com/hueywastaken/"}>
+            <a href={this.iconsUnlocked() && "https://soundcloud.com/hueywastaken/"}>
               <img src={soundcloud} className={"icon hover animation"} />
             </a>
           </Zoom>
           <Zoom top delay={500} appear={true} when={this.iconsUnlocked()}>
-            <a href={"https://www.instagram.com/hueywastaken/"}>
+            <a href={this.iconsUnlocked() && "https://www.instagram.com/hueywastaken/"}>
               <img src={instagram} className={"icon hover animation"} />
             </a>
           </Zoom>
           <Zoom top delay={700} appear={true} when={this.iconsUnlocked()}>
-            <a href={"mailto:hssa2016@pomona.edu"}>
+            <a href={this.iconsUnlocked() && "mailto:hssa2016@pomona.edu"}>
               <img src={email} className={"icon hover animation"} />
             </a>
           </Zoom>

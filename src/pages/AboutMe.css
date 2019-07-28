@@ -12,6 +12,11 @@
   display: block;
 }
 
+.react-reveal.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 .aboutMeTransition {
   top: 0px;
   position: absolute;
@@ -33,21 +38,21 @@
   font-size: 800px;
   animation: slideInRight 0.9s;
   animation-direction: alternate;
-  animation-delay: .3s;
+  animation-delay: .2s;
   animation-iteration-count: 2;
 }
 
 .slideIn.left{
   top: 500px;
-  animation: slideInLeft 0.7s;
+  animation: slideInLeft 1.2s;
   font-size: 70px;
   animation-direction: alternate;
-  animation-delay: .5s;
+  animation-delay: .4s;
   animation-iteration-count: 2;
 }
 
 .fadeToGreen {
-  animation: fadeInAndOut 1.6s;
+  animation: fadeInAndOut 2s;
   animation-fill-mode: forwards;
 }
 
@@ -125,7 +130,7 @@
 
 @keyframes slideInRight {
   0% { right : 0px; opacity: 0 }
-  70% { right : 100px; opacity: 1 }
+  60% { right : 100px; opacity: 1 }
   100% { right : 100px; opacity: 1 }
 }
 
