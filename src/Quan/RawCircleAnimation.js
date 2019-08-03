@@ -171,7 +171,7 @@ export default class RawCircleAnimation extends Component {
   }
   render() {
     return(
-      <div>
+      <div className="rawHomePage">
         <canvas ref={this.canvasRef} />
       </div>
     )

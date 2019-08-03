@@ -4,9 +4,9 @@ import RawCircleAnimation from '../Quan/RawCircleAnimation.js'
 import Typist from 'react-typist';
 
 class HomePage extends React.Component{
+
   render() {
-    return (
-    <div>
+    let oldTypist = (
       <Typist
         cursor={{ show: false }}
         className={"maintext"}
@@ -16,12 +16,13 @@ class HomePage extends React.Component{
         onTypingDone={this.props.onTypingDone}>
         <h1>huey.</h1>
       </Typist>
+    );
+
+    return (
       <div className="meshLayer">
           <RawCircleAnimation />
       </div>
-
-    </div>
-    )
+    );
   }
 }
 

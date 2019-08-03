@@ -22,9 +22,11 @@ class ArtDesign extends React.Component{
   renderItems() {
     return (
         <div className="main">
-        <Fade bottom delay={650}>
-          <img src={audrey} width={"93%"} />
-        </Fade>
+          <div className="artBody">
+            <Fade bottom delay={650}>
+              <img src={audrey} width={"100%"} />
+            </Fade>
+          </div>
         </div>
     );
   }
@@ -45,30 +47,30 @@ class ArtDesign extends React.Component{
 
     return (
     <div>
-    <div className="content">
-      {!this.state.showTitle && animatedTitle}
-      <LightSpeed top when={this.state.showTitle} unmountOnExit={true}>
-        <div className="meshLayer">
-          <MeshAnimation />
+      <div className="content">
+        {!this.state.showTitle && animatedTitle}
+        <LightSpeed top when={this.state.showTitle} unmountOnExit={true}>
+          <div className="meshLayer">
+            <MeshAnimation />
+          </div>
+        </LightSpeed>
+        {!this.state.showTitle && this.triggerReveal()}
+        {this.state.ready && !this.state.showTitle && this.renderItems()}
+        <div className="overlay yellow">
+          {this.state.showTitle && "art&design"}
+          <Fade bottom when={this.state.showTitle} unmountOnExit={true}>
+          <p className="overlayDesc">
+            simplex and noise algorithms by stefan gustavon & optimized at stanford <br />
+            adapted for javascript by joseph gentle, and implemented via react by huey sun (2019)<br />
+            welcome to a wavy future of <b>math</b> driven art.
+          </p>
+          </Fade>
         </div>
-      </LightSpeed>
-      {!this.state.showTitle && this.triggerReveal()}
-      {this.state.ready && !this.state.showTitle && this.renderItems()}
-      <div className="overlay yellow">
-        {this.state.showTitle && "art&design"}
-        <Fade bottom when={this.state.showTitle} unmountOnExit={true}>
-        <p className="overlayDesc">
-          simplex and noise algorithms by stefan gustavon & optimized at stanford <br />
-          adapted for javascript by joseph gentle, and implemented via react by huey sun (2019)<br />
-          welcome to a wavy future of <b>math</b> driven art.
-        </p>
-        </Fade>
+        <button className="reveal yellow" onClick={() => this.setState({ showTitle: !this.state.showTitle, ready: false })}>
+          {this.state.showTitle ? <b>&nbsp;&nbsp;Gallery&nbsp;&nbsp;</b> : <b>&nbsp;&nbsp;Back&nbsp;&nbsp;</b>}
+        </button>
       </div>
-      <button className="reveal yellow" onClick={() => this.setState({ showTitle: !this.state.showTitle, ready: false })}>
-        {this.state.showTitle ? <b>&nbsp;&nbsp;Gallery&nbsp;&nbsp;</b> : <b>&nbsp;&nbsp;Back&nbsp;&nbsp;</b>}
-      </button>
-    </div>
-    {!this.state.showTitle && comingSoon}
+      {!this.state.showTitle && comingSoon}
     </div>
     )
   }

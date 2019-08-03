@@ -34,7 +34,7 @@
 }
 
 .slideIn.right{
-  top: -90px;
+  line-height:100%;
   font-size: 800px;
   animation: slideInRight 0.9s;
   animation-direction: alternate;
