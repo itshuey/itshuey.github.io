@@ -6,6 +6,7 @@ import AboutMe from './pages/AboutMe.js.jsx';
 import ArtDesign from './pages/ArtDesign.js.jsx';
 import Projects from './pages/Projects.js.jsx'
 import AdditionalInfo from './pages/AdditionalInfo.js.jsx';
+import MobilePage from './pages/MobilePage.js.jsx';
 import { Carousel } from 'huey-website-carousel'
 import 'huey-website-carousel/lib/styles/carousel.min.css'
 
@@ -18,8 +19,21 @@ class App extends React.Component {
       backgroundColor: YELLOW,
       finishedAnimation: true,
       fontColor: "white",
+      width: window.innerWidth,
     };
   }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  handleWindowSizeChange = () => {
+    this.setState({ width: window.innerWidth });
+  };
 
   loadingFunctions() {
     setTimeout(() => this.setState({ backgroundColor: "black" }), 800);
@@ -27,6 +41,10 @@ class App extends React.Component {
   }
 
   render(){
+    const { width } = this.state;
+    const isMobile = width <= 500;
+    if (isMobile) return <MobilePage/>;
+
     const settings = {
       showStatus: false,
       showThumbs: false,
