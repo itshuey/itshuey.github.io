@@ -164,10 +164,10 @@ class AboutMe extends React.Component{
         </p>
         </Zoom>
         {iconBar}
-        <a className={"more link"} onClick={() => this.setState({ showMore: true })}>
+        <a className={"about-more link"} onClick={() => this.setState({ showMore: true })}>
           {this.state.showMore ? "in development!" : "more!"}
         </a>
-        <a className={"back link"} onClick={() => this.setState({ renderTitle: true, hideMain: false })}>
+        <a className={"about-back link"} onClick={() => this.setState({ renderTitle: true, hideMain: false })}>
           back~
         </a>
       </div>
