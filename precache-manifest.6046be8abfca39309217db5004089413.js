@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "32d102266d0266f2c6e13e5c259dce53",
+    "revision": "2cc0fea1f19e69124dd4e859f162e408",
     "url": "/index.html"
   },
   {
-    "revision": "e9daa6109b05a66494fc",
-    "url": "/static/css/main.09c9ab3f.chunk.css"
+    "revision": "99976c540dae877ac1d9",
+    "url": "/static/css/main.b21ea6f3.chunk.css"
   },
   {
-    "revision": "d7784125352bffb10c82",
-    "url": "/static/js/2.7990867e.chunk.js"
+    "revision": "5cf91b6ec4282e3f99cb",
+    "url": "/static/js/2.b9fc8236.chunk.js"
   },
   {
-    "revision": "e9daa6109b05a66494fc",
-    "url": "/static/js/main.4a0da003.chunk.js"
+    "revision": "99976c540dae877ac1d9",
+    "url": "/static/js/main.e84faf8a.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -38,5 +38,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "86201c040469afc91830f89547223a75",
     "url": "/static/media/polaroid.86201c04.jpg"
+  },
+  {
+    "revision": "992e4db1e60de9cab7e244956b06a300",
+    "url": "/static/media/shimmer.992e4db1.jpg"
   }
 ]);
