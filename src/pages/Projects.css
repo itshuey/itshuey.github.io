@@ -44,21 +44,37 @@
   font-weight: 500px;
 }
 
+.outline-header {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: gray;
+}
+
+.solid-header {
+  margin-top: -50px;
+}
+
 .projects-more {
   right: 30px;
 }
 
 .project-content {
   max-width: 70%;
+  margin-bottom: 50px;
+}
+
+.gradeBoo {
+  width: 650px;
 }
 
 .project-title {
   font-family: 'Roboto Mono', monospace;
-  font-size: 150px;
+  font-size: 120px;
+  font-weight: 450;
 }
 
 .project-body {
-  font-size: 50px;
+  font-size: 36px;
   text-align: left;
   margin-top: 10px;
 }
@@ -77,20 +93,13 @@
   row-gap: 100px;
 }
 
-.projectTags {
-  font-family: 'Roboto';
-  font-size: 20px;
-}
-
 .tags {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  font-family: 'Roboto';
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
   text-align: left;
-  font-size: 50px;
-}
-
-.tag {
-  margin-right: 70px;
+  font-size: 36px;
 }
 
 .projectDemo {

@@ -57,9 +57,10 @@ class Projects extends React.Component{
   }
 
   renderProjectTags(current, source) {
+    let tagName = current + " tags"
     return (
-      <div className="tags">
-        <a className="tag">description</a>
+      <div className={tagName}>
+        <a className="tag">desc</a>
         <a className="tag">demo</a>
         <a className="tag">technical</a>
         <a className="tag">source</a>
@@ -74,25 +75,36 @@ class Projects extends React.Component{
 
     if (title == "Netflix+"){
       contentState = this.state.netfix_tab;
-      description = "A chrome extension that modifies netflix's website to include \
-                    indicators for expiring content that show as you browse!";
+      description = (<div className="netflix+-description">
+                      <div style={{ "text-align": "left" }}> A chrome extension </div>
+                      <div style={{ "text-align": "center" }}> that <i> injects expiry indicators </i></div>
+                      <div style={{ "text-align": "right" }}> into default browsing view! </div>
+                    </div>);
 
     } else if (title == "gradeBook") {
       contentState = this.state.gradebook_tab;
-
-      description = "A java application that stores input assignments to calculate your grades! \
-                    Features local XML storage or cloud storage via a AWS MySQL database.";
+      description = (<div className="gradeBook-description">
+                      <div style={{ "text-align": "left" }}> A java application that </div>
+                      <div style={{ "text-align": "center" }}><i> stores input assignments </i></div>
+                      <div style={{ "text-align": "right" }}> to calculate your grades! </div>
+                    </div>);
 
     } else if (title == "tweet-me") {
       contentState = this.state.tweetme_tab;
-      description = "Tweet-me takes in an input twitter handle or local .txt file and \
-                    uses a markov-chain algorithm to generate a tweet in that style!";
+      description = (<div className="tweet-me-description">
+                      <div style={{ "text-align": "left" }}> A python application </div>
+                      <div style={{ "text-align": "center" }}> that uses a <i> markov-chain </i></div>
+                      <div style={{ "text-align": "right" }}> to generate mock tweets! </div>
+                    </div>)
 
     } else if (title == "hueysun.com") {
       contentState = this.state.website_tab;
-      description = "Hope you've been enjoying my website! It's built in react.js, \
-                    and is version two of my yearly effort to rebuild my site with \
-                    the things I leared in the previous year.";
+      description = (<div className="hueysun.com-description">
+                      <div style={{ "text-align": "left" }}> Hope you've been enjoying my site! </div>
+                      <div style={{ "text-align": "left" }}> It's built in react.js, and is version two </div>
+                      <div style={{ "text-align": "center" }}> of my <i> yearly wesbite rebuild </i></div>
+                      <div style={{ "text-align": "right" }}> with the cool new stuff I picked up! </div>
+                    </div>)
 
     };
 
@@ -108,14 +120,13 @@ class Projects extends React.Component{
       <div className="content">
         <div className="project-content">
           <div className="project-title">
-            {title}
+            <div className="outline-header"> {title} </div>
+            <div className="solid-header"> {title} </div>
           </div>
           <div className="project-body">
             {content}
           </div>
-          <div className="project-tags">
-            {this.renderProjectTags()}
-          </div>
+          {this.renderProjectTags()}
         </div>
         <div className="text-button projects-x"
           onClick={()=>this.setState({ currentProject: "" })}>
