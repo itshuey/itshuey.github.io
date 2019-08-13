@@ -48,24 +48,19 @@
   right: 30px;
 }
 
+.project-content {
+  max-width: 70%;
+}
+
 .project-title {
   font-family: 'Roboto Mono', monospace;
-  font-size: 70px;
+  font-size: 150px;
 }
 
 .project-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  font-size: 50px;
+  text-align: left;
   margin-top: 10px;
-}
-
-.project-description {
-  max-width: 30vw;
-  text-align: right;
-}
-
-.project-demo {
-
 }
 
 .projectsGrid {
@@ -87,6 +82,17 @@
   font-size: 20px;
 }
 
+.tags {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-size: 50px;
+}
+
+.tag {
+  margin-right: 70px;
+}
+
 .projectDemo {
   font-family: 'Roboto Mono', monospace;
   font-size: 20px;
@@ -101,7 +107,6 @@
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
   font-size: 40px;
-
 }
 
 .overlay.red {
