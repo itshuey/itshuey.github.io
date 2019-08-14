@@ -56,14 +56,32 @@ class Projects extends React.Component{
     );
   }
 
-  renderProjectTags(current, source) {
-    let tagName = current + " tags"
+  renderProjectTags(current) {
+    let source, updateTab;
+    switch (current) {
+      case "Netflix+":
+        source="https://github.com/itshuey/netflix-features";
+        updateTab = (tab) => this.setState({ netflix_tab: tab });
+        break;
+      case "gradeBook":
+        source="https://github.com/itshuey/gradeBook";
+        updateTab = (tab) => this.setState({ gradebook_tab: tab });
+        break;
+      case "tweet-me":
+        source="https://github.com/itshuey/twitter-markov-generator";
+        updateTab = (tab) => this.setState({ tweetme_tab: tab });
+        break;
+      case "hueysun.com":
+        source="https://github.com/itshuey/itshuey.github.io";
+        updateTab = (tab) => this.setState({ website_tab: tab });
+        break;
+    }
     return (
-      <div className={tagName}>
-        <a className="tag">desc</a>
-        <a className="tag">demo</a>
-        <a className="tag">technical</a>
-        <a className="tag">source</a>
+      <div className="tags">
+        <span className="tag" onClick={() => updateTab("desc")}>desc</span>
+        <span className="tag" onClick={() => updateTab("demo")}>demo</span>
+        <span className="tag" onClick={() => updateTab("technical")}>technical</span>
+        <a target="_blank" href={source} className="tag">source</a>
       </div>
     );
   }
@@ -73,9 +91,12 @@ class Projects extends React.Component{
     let description, demo, technical;
     let contentState, content;
 
+    demo = (<div className="demo"> ~ DEMO SOON ~ </div>);
+    technical = (<div className="technical"> ~ DETAILS SOON ~ </div>);
+
     if (title == "Netflix+"){
-      contentState = this.state.netfix_tab;
-      description = (<div className="netflix+-description">
+      contentState = this.state.netflix_tab;
+      description = (<div className="netflix-description">
                       <div style={{ "text-align": "left" }}> A chrome extension </div>
                       <div style={{ "text-align": "center" }}> that <i> injects expiry indicators </i></div>
                       <div style={{ "text-align": "right" }}> into default browsing view! </div>
@@ -83,7 +104,7 @@ class Projects extends React.Component{
 
     } else if (title == "gradeBook") {
       contentState = this.state.gradebook_tab;
-      description = (<div className="gradeBook-description">
+      description = (<div className="gradebook-description">
                       <div style={{ "text-align": "left" }}> A java application that </div>
                       <div style={{ "text-align": "center" }}><i> stores input assignments </i></div>
                       <div style={{ "text-align": "right" }}> to calculate your grades! </div>
@@ -91,7 +112,7 @@ class Projects extends React.Component{
 
     } else if (title == "tweet-me") {
       contentState = this.state.tweetme_tab;
-      description = (<div className="tweet-me-description">
+      description = (<div className="tweetme-description">
                       <div style={{ "text-align": "left" }}> A python application </div>
                       <div style={{ "text-align": "center" }}> that uses a <i> markov-chain </i></div>
                       <div style={{ "text-align": "right" }}> to generate mock tweets! </div>
@@ -99,7 +120,7 @@ class Projects extends React.Component{
 
     } else if (title == "hueysun.com") {
       contentState = this.state.website_tab;
-      description = (<div className="hueysun.com-description">
+      description = (<div className="website-description">
                       <div style={{ "text-align": "left" }}> Hope you've been enjoying my site! </div>
                       <div style={{ "text-align": "left" }}> It's built in react.js, and is version two </div>
                       <div style={{ "text-align": "center" }}> of my <i> yearly wesbite rebuild </i></div>
@@ -108,11 +129,11 @@ class Projects extends React.Component{
 
     };
 
-    if (contentState = "desc") {
+    if (contentState == "desc") {
       content = description;
-    } else if (contentState = "demo") {
+    } else if (contentState == "demo") {
       content = demo;
-    } else if (contentState = "technical") {
+    } else if (contentState == "technical") {
       content = technical;
     }
 
@@ -126,7 +147,7 @@ class Projects extends React.Component{
           <div className="project-body">
             {content}
           </div>
-          {this.renderProjectTags()}
+          {this.renderProjectTags(this.state.currentProject)}
         </div>
         <div className="text-button projects-x"
           onClick={()=>this.setState({ currentProject: "" })}>
