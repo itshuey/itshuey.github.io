@@ -56,7 +56,7 @@ class Projects extends React.Component{
     );
   }
 
-  renderProjectTags(current) {
+  renderProjectTags(current, state) {
     let source, updateTab;
     switch (current) {
       case "Netflix+":
@@ -76,8 +76,10 @@ class Projects extends React.Component{
         updateTab = (tab) => this.setState({ website_tab: tab });
         break;
     }
+
+    let tagName = "tags " + state + "-tag " + current;
     return (
-      <div className="tags">
+      <div className={tagName}>
         <span className="tag" onClick={() => updateTab("desc")}>desc</span>
         <span className="tag" onClick={() => updateTab("demo")}>demo</span>
         <span className="tag" onClick={() => updateTab("technical")}>technical</span>
@@ -90,21 +92,28 @@ class Projects extends React.Component{
     let title = this.state.currentProject;
     let description, demo, technical;
     let contentState, content;
+    let shouldShowTitle = true;
 
     demo = (<div className="demo"> ~ DEMO SOON ~ </div>);
     technical = (<div className="technical"> ~ DETAILS SOON ~ </div>);
 
     if (title == "Netflix+"){
       contentState = this.state.netflix_tab;
-      description = (<div className="netflix-description">
+      description = (<div className="description">
                       <div style={{ "text-align": "left" }}> A chrome extension </div>
                       <div style={{ "text-align": "center" }}> that <i> injects expiry indicators </i></div>
                       <div style={{ "text-align": "right" }}> into default browsing view! </div>
                     </div>);
 
+      demo = (<iframe className="embedded-demo" width="100%" height="600"
+                src="https://www.youtube.com/embed/JLpCABzAXuU" frameborder="1"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>);
+
     } else if (title == "gradeBook") {
       contentState = this.state.gradebook_tab;
-      description = (<div className="gradebook-description">
+      description = (<div className="description">
                       <div style={{ "text-align": "left" }}> A java application that </div>
                       <div style={{ "text-align": "center" }}><i> stores input assignments </i></div>
                       <div style={{ "text-align": "right" }}> to calculate your grades! </div>
@@ -112,7 +121,7 @@ class Projects extends React.Component{
 
     } else if (title == "tweet-me") {
       contentState = this.state.tweetme_tab;
-      description = (<div className="tweetme-description">
+      description = (<div className="description">
                       <div style={{ "text-align": "left" }}> A python application </div>
                       <div style={{ "text-align": "center" }}> that uses a <i> markov-chain </i></div>
                       <div style={{ "text-align": "right" }}> to generate mock tweets! </div>
@@ -120,34 +129,42 @@ class Projects extends React.Component{
 
     } else if (title == "hueysun.com") {
       contentState = this.state.website_tab;
-      description = (<div className="website-description">
+      description = (<div className="description">
                       <div style={{ "text-align": "left" }}> Hope you've been enjoying my site! </div>
                       <div style={{ "text-align": "left" }}> It's built in react.js, and is version two </div>
                       <div style={{ "text-align": "center" }}> of my <i> yearly wesbite rebuild </i></div>
                       <div style={{ "text-align": "right" }}> with the cool new stuff I picked up! </div>
-                    </div>)
+                    </div>);
 
+      demo = (<div className="demo"> ~ THIS IS IT! ~ </div>);
     };
 
     if (contentState == "desc") {
       content = description;
     } else if (contentState == "demo") {
       content = demo;
+      if (title == "Netflix+") shouldShowTitle = false;
     } else if (contentState == "technical") {
       content = technical;
     }
 
+    let titleText = (
+      <div className="project-title">
+        <div className="outline-header"> {title} </div>
+        <div className="solid-header"> {title} </div>
+      </div>
+    );
+
+    let contentNames = "project-content " + contentState + " " + title;
+
     return (
       <div className="content">
-        <div className="project-content">
-          <div className="project-title">
-            <div className="outline-header"> {title} </div>
-            <div className="solid-header"> {title} </div>
-          </div>
+        <div className={contentNames}>
+          {shouldShowTitle && titleText}
           <div className="project-body">
             {content}
           </div>
-          {this.renderProjectTags(this.state.currentProject)}
+          {this.renderProjectTags(this.state.currentProject, contentState)}
         </div>
         <div className="text-button projects-x"
           onClick={()=>this.setState({ currentProject: "" })}>

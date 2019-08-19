@@ -63,19 +63,28 @@
   margin-bottom: 50px;
 }
 
-.gradeBoo {
-  width: 650px;
-}
-
 .project-title {
   font-size: 120px;
   font-weight: 450;
 }
 
+.content .project-content .embedded-demo {
+  position: relative;
+  width: 850;
+  height: 450;
+  border: 4px solid #551A8B;
+  margin-bottom: -10px;
+}
+
+.project-content.demo.Netflix\+ {
+  min-width: 90%;
+  margin-bottom: 50px;
+}
+
 .project-body {
   font-size: 36px;
   text-align: left;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .projectsGrid {
@@ -92,6 +101,10 @@
   row-gap: 100px;
 }
 
+.description {
+  font-weight: 200;
+}
+
 .tags {
   font-family: 'Roboto';
   display: flex;
@@ -99,6 +112,12 @@
   margin-top: 20px;
   text-align: left;
   font-size: 36px;
+  font-weight: normal;
+}
+
+.tags.demo-tag.Netflix\+ {
+  margin-left: 7vw;
+  margin-right: 7vw;
 }
 
 a.tag{
