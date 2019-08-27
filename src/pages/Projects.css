@@ -14,6 +14,36 @@
   background-size: cover;
 }
 
+.defaultBg, .redBg, .yellowBg, .greenBg {
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.defaultBG  { animation: blackTransition 0.8s; }
+.redBG      { animation: redTransition 0.8s; }
+.yellowBG   { animation: yellowTransition 0.8s; }
+.greenBG    { animation: greenTransition 0.8s; }
+
+@keyframes appear {
+  from {opacity: 0} to {opacity: 1};
+}
+
+@keyframes redTransition {
+  from {background-color: inherit} to {background-color: #fc2c28};
+}
+
+@keyframes greenTransition {
+  from {background-color: inherit} to {background-color: #007639};
+}
+
+@keyframes yellowTransition {
+  from {background-color: inherit} to {background-color: #fbba00};
+}
+
+@keyframes blackTransition {
+  from {background-color: inherit} to {background-color: black};
+}
+
 .shimmer {
   width: 100%;
   height: 100%;
@@ -51,34 +81,26 @@
 }
 
 .solid-header {
-  margin-top: -50px;
+  margin-top: -60px;
 }
 
 .projects-more {
   right: 30px;
 }
 
-.project-content {
-  max-width: 70%;
-  margin-bottom: 50px;
-}
-
 .project-title {
-  font-size: 120px;
+  font-size: 150px;
   font-weight: 450;
 }
 
-.content .project-content .embedded-demo {
-  position: relative;
-  width: 850;
-  height: 450;
+.content .project-body iframe.embedded-demo {
+  position: absolute;
+  bottom: 80px;
+  right: 7vw;
   border: 4px solid #551A8B;
-  margin-bottom: -10px;
-}
-
-.project-content.demo.Netflix\+ {
-  min-width: 90%;
-  margin-bottom: 50px;
+  width: 70vw;
+  height: 78vh;
+  margin-bottom: 0px;
 }
 
 .project-body {
@@ -101,30 +123,71 @@
   row-gap: 100px;
 }
 
-.description {
+.technical, .description {
   font-weight: 200;
+  position: absolute;
+  right: 180px;
+  bottom: 80px;
+  width: 500px;
+  font-size: 20px;
 }
 
 .tags {
   font-family: 'Roboto';
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  text-align: left;
-  font-size: 36px;
-  font-weight: normal;
+  font-weight: 600;
 }
 
-.tags.demo-tag.Netflix\+ {
-  margin-left: 7vw;
-  margin-right: 7vw;
+.tags-row {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 36px;
+}
+
+.tags-col {
+  font-size: 40px;
+  text-align: right;
+  position: absolute;
+  bottom: 80px;
+  left: 100px;
+}
+
+.tags-col .technical-tag {
+  margin-bottom: 150px;
+}
+
+.tags-demo.tags-col .technical-tag {
+  margin-bottom: 350px;
+}
+
+.tag.current {
+  color: #551A8B;
 }
 
 a.tag{
   text-decoration: none;
 }
 
-.demo, .technical {
+.tag {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: -2px;
+  color: white;
+  cursor: pointer;
+}
+
+.state {
+  font-family: 'Roboto Mono', monospace;
+  position: absolute;
+  bottom: 80px;
+  right: 750px;
+  font-size: 120px;
+  margin-bottom: -25px;
+  font-weight: 500px;
+}
+
+.demo {
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
   text-align: center;
@@ -146,6 +209,14 @@ a.tag{
   border-color: white;
 }
 
+.projectDemo:focus {
+  outline:0;
+}
+
+.projectDemo:active {
+  border-style: solid;
+}
+
 .projectHeader {
   font-weight: bold;
   font-size: 40px;
@@ -156,7 +227,7 @@ a.tag{
 }
 
 .selected .overlay.red {
-  animation: neon 3s ease-in infinite alternate;
+  animation: neon4 3s ease-in infinite alternate;
   animation-delay: .5s;
 }
 
@@ -223,7 +294,6 @@ a.tag{
   5% {text-shadow: 0 0 8px #fc2c28, 0 0 12px #fc2c28, 0 0 16px #fc2c28; opacity: .5;}
   40% {text-shadow: 0 0 140px #fc2c28, 0 0 170px #fc2c28, 0 0 200px #fc2c28; opacity: 1;}
   66% {text-shadow: none }
-
 }
 
 @keyframes neon2 {
@@ -235,5 +305,12 @@ a.tag{
 @keyframes neon {
   33% {text-shadow: none }
   60% {text-shadow: 0 0 140px #fc2c28, 0 0 170px #fc2c28, 0 0 200px #fc2c28; opacity: 1;}
+  100% {text-shadow: 0 0 8px #fc2c28, 0 0 12px #fc2c28, 0 0 16px #fc2c28; opacity: .5;}
+}
+
+@keyframes neon4 {
+  33% {text-shadow: none }
+  55% {text-shadow: 0 0 140px #fc2c28, 0 0 170px #fc2c28, 0 0 200px #fc2c28; opacity: 1;}
+  95% {text-shadow: 0 0 20px #fc2c28, 0 0 25px #fc2c28, 0 0 30px #fc2c28; opacity: .5;}
   100% {text-shadow: 0 0 8px #fc2c28, 0 0 12px #fc2c28, 0 0 16px #fc2c28; opacity: .5;}
 }

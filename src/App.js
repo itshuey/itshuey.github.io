@@ -59,16 +59,16 @@ class App extends React.Component {
       <div className="App">
       <Carousel {...settings}>
         <div name="slide">
-          <HomePage />
+          <HomePage/>
         </div>
         <div name="slide">
-          <AboutMe />
+          <AboutMe/>
         </div>
         <div name="resizable slide">
-          <ArtDesign />
+          <ArtDesign/>
         </div>
         <div name="slide">
-          <Projects />
+          <Projects/>
         </div>
       </Carousel>
     </div>
