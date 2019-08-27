@@ -9,9 +9,15 @@
   font-size: 100px;
 }
 
+.background {
+  width: 100vw;
+  height: 100vh;
+}
+
 .shimmerBG {
   background-image: url(../media/shimmer.jpg);
   background-size: cover;
+  animation: appear;
 }
 
 .defaultBG  { animation: blackTransition; }
@@ -19,13 +25,13 @@
 .yellowBG   { animation: yellowTransition; }
 .greenBG    { animation: greenTransition; }
 
-.defaultBG, .redBG, .yellowBG, .greenBG {
+.defaultBG, .redBG, .yellowBG, .greenBG, .shimmerBG {
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
 
-@keyframes appear           { from {opacity: 0} to {opacity: 1}; }
+@keyframes appear           { from {opacity: 0} to {opacity: 0.85}; }
 @keyframes redTransition    { from {background-color: inherit} to {background-color: #fc2c28}; }
 @keyframes greenTransition  { from {background-color: inherit} to {background-color: #007639}; }
 @keyframes yellowTransition { from {background-color: inherit} to {background-color: #fbba00}; }
@@ -97,6 +103,7 @@
 
 .projectsGrid {
   display: grid;
+  position: absolute;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 

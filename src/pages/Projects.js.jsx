@@ -224,7 +224,8 @@ class Projects extends React.Component{
     };
 
     return (
-      <div className={"content " + background}>
+      <div className={"content"}>
+        <div className={"background " + background}/>
         <div className={"projectsGrid"}>
           {this.renderProjectTitle("gradeBook", "Java, MySQL, AWS, NetBeans, Swing", "redBG")}
           {this.renderProjectTitle("Netflix+", "Javascript, Browserify, Node.js", "yellowBG")}
