@@ -3,8 +3,8 @@ import MeshAnimation from '../Mesh/MeshAnimation.js';
 import './ArtDesign.css'
 import '../App.css'
 import { Zoom, Fade, LightSpeed } from 'react-reveal';
-import sixteenHours from '../media/16hours.mp4';
-import audrey from '../media/audrey.jpg';
+import sixteenHours from '../art/16hours.mp4';
+import audrey from '../art/audrey.jpg';
 
 class ArtDesign extends React.Component{
   constructor(props) {
@@ -15,17 +15,76 @@ class ArtDesign extends React.Component{
     };
   }
 
+  componentDidMount() {
+    function importAll(r) {
+      return r.keys().map(r);
+    };
+
+    this.setState({
+      posters: importAll(require.context('../art/posters', false, /\.(png|jpe?g|svg)$/)),
+      design1: importAll(require.context('../art/design1', false, /\.(png|jpe?g|svg)$/)),
+
+    });
+  }
+
   triggerReveal(){
     setTimeout(() => this.setState({ ready: true }), 500);
   }
 
   renderItems() {
+    function renderItems(group, width) {
+      return group.map((image) => <img src={image} width={width}/>
+      );
+    }
+
+    let header = (
+      <Fade bottom delay={650}>
+        <img src={audrey} width={"100%"} />
+      </Fade>
+    );
+
+    let posters = (
+      <Fade bottom cascade delay={200}>
+        <div className="posters">
+          {renderItems(this.state.posters, "18%")}
+        </div>
+      </Fade>
+    );
+
+    let design1 = (
+      <Fade bottom cascade delay={200}>
+        <div className="posters">
+          {renderItems(this.state.design1, "32%")}
+        </div>
+      </Fade>
+    );
+
+    let hr16 = (
+      <div className="videos" width="90%">
+        <video muted loop autoplay oncanplay="this.muted=true">
+          <source src={sixteenHours} type="video/mp4" />
+        </video>
+      </div>
+    );
+
+    let videoContent = (
+      <Fade bottom cascade delay={200}>
+        <div className="her-vimeo">
+          <iframe
+            src="https://player.vimeo.com/video/284876435"
+            height="600px" frameborder="0" allow="autoplay"
+            allowfullscreen={false}
+          />
+        </div>
+      </Fade>
+    );
+
     return (
         <div className="main">
           <div className="artBody">
-            <Fade bottom delay={650}>
-              <img src={audrey} width={"100%"} />
-            </Fade>
+            {header}
+            {posters}
+            {videoContent}
           </div>
         </div>
     );
@@ -47,7 +106,7 @@ class ArtDesign extends React.Component{
 
     return (
     <div>
-      <div className="content">
+      <div className={this.state.showTitle ? "content" : "content art-portfolio"}>
         {!this.state.showTitle && animatedTitle}
         <LightSpeed top when={this.state.showTitle} unmountOnExit={true}>
           <div className="meshLayer">
