@@ -112,7 +112,12 @@ class Projects extends React.Component{
     let contentState, content;
     let shouldShowTitle;
 
-    demo = (<div className="demo"> ~ DEMO SOON ~ </div>);
+    demo = (<div className="this-is-it">
+              <div>DEMO</div>
+              <div style={{ "margin-top": "-80px"}}> SOON </div>
+            </div>
+          );
+          
     technical = (<div className="technical"> ~ DETAILS SOON ~ </div>);
 
     if (title == "Netflix+"){
@@ -175,12 +180,12 @@ class Projects extends React.Component{
                       <div style={{ "text-align": "right" }}> with the cool new stuff I picked up! </div>
                     </div>);
 
-      demo = (<div className="demo"> ~ THIS IS IT! ~ </div>);
+      demo = (<div className="this-is-it"> THIS ~<br/>IS <br/>IT! </div>);
 
       technical = (<div className="technical">
-                    This website was built in React.js. The slide functionality comes from a package react-slick that
-                    I tailored to my specific needs. The homepage animation was done in raw javascript, and the
-                    net animation was done in three.js and added in as a separate component.
+                    This website is built in React.js. The slides are based on react-slick, with a
+                    few modifications to scolling behavior and display. The homepage animation was done in raw javascript,
+                    and the net animation was done in three.js and bundled into react as a component.
                   </div>);
     };
 
