@@ -14,35 +14,22 @@
   background-size: cover;
 }
 
-.defaultBg, .redBg, .yellowBg, .greenBg {
+.defaultBG  { animation: blackTransition; }
+.redBG      { animation: redTransition; }
+.yellowBG   { animation: yellowTransition; }
+.greenBG    { animation: greenTransition; }
+
+.defaultBG, .redBG, .yellowBG, .greenBG {
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
 
-.defaultBG  { animation: blackTransition 0.8s; }
-.redBG      { animation: redTransition 0.8s; }
-.yellowBG   { animation: yellowTransition 0.8s; }
-.greenBG    { animation: greenTransition 0.8s; }
-
-@keyframes appear {
-  from {opacity: 0} to {opacity: 1};
-}
-
-@keyframes redTransition {
-  from {background-color: inherit} to {background-color: #fc2c28};
-}
-
-@keyframes greenTransition {
-  from {background-color: inherit} to {background-color: #007639};
-}
-
-@keyframes yellowTransition {
-  from {background-color: inherit} to {background-color: #fbba00};
-}
-
-@keyframes blackTransition {
-  from {background-color: inherit} to {background-color: black};
-}
+@keyframes appear           { from {opacity: 0} to {opacity: 1}; }
+@keyframes redTransition    { from {background-color: inherit} to {background-color: #fc2c28}; }
+@keyframes greenTransition  { from {background-color: inherit} to {background-color: #007639}; }
+@keyframes yellowTransition { from {background-color: inherit} to {background-color: #fbba00}; }
+@keyframes blackTransition  { from {background-color: inherit} to {background-color: black}; }
 
 .shimmer {
   width: 100%;
@@ -67,9 +54,12 @@
   left: 30px;
 }
 
+.projects-x, .projects-more {
+  right: 30px;
+}
+
 .projects-x {
   font-size: 30px;
-  right: 30px;
   top: 15px;
   font-weight: 500px;
 }
@@ -82,10 +72,6 @@
 
 .solid-header {
   margin-top: -60px;
-}
-
-.projects-more {
-  right: 30px;
 }
 
 .project-title {
@@ -178,7 +164,6 @@ a.tag{
 }
 
 .state {
-  font-family: 'Roboto Mono', monospace;
   position: absolute;
   bottom: 80px;
   right: 750px;
@@ -188,7 +173,6 @@ a.tag{
 }
 
 .demo {
-  font-family: 'Roboto Mono', monospace;
   font-weight: bold;
   text-align: center;
   font-size: 50px;
@@ -196,7 +180,7 @@ a.tag{
   margin-bottom: 45px;
 }
 
-.projectDemo, .projectHeader, .project-title{
+.projectDemo, .projectHeader, .project-title, .state, .demo{
   font-family: 'Roboto Mono', monospace;
 }
 
