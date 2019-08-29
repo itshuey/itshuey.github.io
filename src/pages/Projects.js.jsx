@@ -117,7 +117,17 @@ class Projects extends React.Component{
               <div style={{ "margin-top": "-80px"}}> SOON </div>
             </div>
           );
-          
+
+    function getDemo(url) {
+        return (
+          <iframe className="embedded-demo" width="600" height="70%"
+            src={url} frameborder="1"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        );
+    }
+
     technical = (<div className="technical"> ~ DETAILS SOON ~ </div>);
 
     if (title == "Netflix+"){
@@ -131,11 +141,7 @@ class Projects extends React.Component{
                       that adds an indicator to titles that are expiring!
                     </div>);
 
-      demo = (<iframe className="embedded-demo" width="600" height="70%"
-                src="https://www.youtube.com/embed/JLpCABzAXuU" frameborder="1"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>);
+      demo = getDemo("https://www.youtube.com/embed/JLpCABzAXuU");
 
       technical = (<div className="technical">
                     When you open Netflix, the extension constructs a whatsonnetflix.com URL
@@ -166,10 +172,16 @@ class Projects extends React.Component{
                     </div>)
 
       technical = (<div className="technical">
-                    Tweet-me uses tweepy to scrape a twitter handle, parsing the response into plain text,
-                    and feeds it into a markov-chain algorithm which stores the key, value pair of old word, new word.
-                    To generate a tweet, it picks a random starting word, and randomly selects from the keys.
+                    Tweet-me uses tweepy to scrape a twitter handle for its last 250-or-so tweets,
+                    parsing the response into text (or emojis!), and feeds it into the markov-chain algorithm.
+                    The algorithm groups words by their frequency and context: for each successive word,
+                    it adds a key, value pair of old word to new word.
+                    (Storing a single word outpreforms triplet algorithms with the scale of text I'm working with.)
+                    To generate a tweet, it picks a starting word, and propogates on by randomly selecting
+                    the next word from its values.
                   </div>);
+
+      demo = getDemo("https://www.youtube.com/embed/SuwF9L4LgAM");
 
     } else if (title == "hueysun.com") {
       contentState = this.state.website_tab;
@@ -234,7 +246,7 @@ class Projects extends React.Component{
         <div className={"projectsGrid"}>
           {this.renderProjectTitle("gradeBook", "Java, MySQL, AWS, NetBeans, Swing", "redBG")}
           {this.renderProjectTitle("Netflix+", "Javascript, Browserify, Node.js", "yellowBG")}
-          {this.renderProjectTitle("tweet-me", "Python, Beautiful Soup, etc.", "greenBG")}
+          {this.renderProjectTitle("tweet-me", "Python, Tweepy", "greenBG")}
           {this.renderProjectTitle("hueysun.com", "Javascript, React.js, HTML, CSS", "shimmerBG")}
         </div>
         <div className={"text-button projects-back"}
