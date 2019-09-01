@@ -22,8 +22,6 @@ class ArtDesign extends React.Component{
 
     this.setState({
       posters: importAll(require.context('../art/posters', false, /\.(png|jpe?g|svg)$/)),
-      design1: importAll(require.context('../art/design1', false, /\.(png|jpe?g|svg)$/)),
-
     });
   }
 
@@ -47,14 +45,6 @@ class ArtDesign extends React.Component{
       <Fade bottom cascade delay={200}>
         <div className="posters">
           {renderItems(this.state.posters, "18%")}
-        </div>
-      </Fade>
-    );
-
-    let design1 = (
-      <Fade bottom cascade delay={200}>
-        <div className="posters">
-          {renderItems(this.state.design1, "32%")}
         </div>
       </Fade>
     );
