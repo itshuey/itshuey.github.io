@@ -30,8 +30,8 @@ class ArtDesign extends React.Component{
   }
 
   renderItems() {
-    function renderItems(group, width) {
-      return group.map((image) => <img src={image} width={width} height={width}/>
+    function renderItems(group, scale) {
+      return group.map((image) => <img src={image} width={scale} height={scale}/>
       );
     }
 
