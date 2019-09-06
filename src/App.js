@@ -20,6 +20,7 @@ class App extends React.Component {
       finishedAnimation: true,
       fontColor: "white",
       width: window.innerWidth,
+      height: window.innerHeight,
     };
   }
 
@@ -32,7 +33,7 @@ class App extends React.Component {
   }
 
   handleWindowSizeChange = () => {
-    this.setState({ width: window.innerWidth });
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
   };
 
   loadingFunctions() {
@@ -41,35 +42,30 @@ class App extends React.Component {
   }
 
   render(){
-    const { width } = this.state;
+    const { width, height } = this.state;
     const isMobile = width <= 500;
+    const isShort = height <= 0;
     if (isMobile) return <MobilePage/>;
+    if (isShort) return <MobilePage/>;
+
+    let saved = (
+      <div className="content" style={{ backgroundColor: this.state.backgroundColor}}>
+        <HomePage onTypingDone={() => this.loadingFunctions()} />
+      </div>);
 
     const settings = {
       showStatus: false,
       showThumbs: false,
       dynamicHeight: true,
     };
-    let saved = (
-      <div className="content" style={{ backgroundColor: this.state.backgroundColor}}>
-        <HomePage onTypingDone={() => this.loadingFunctions()} />
-      </div>);
 
     return (
       <div className="App">
       <Carousel {...settings}>
-        <div name="slide">
-          <HomePage/>
-        </div>
-        <div name="slide">
-          <AboutMe/>
-        </div>
-        <div name="resizable slide">
-          <ArtDesign/>
-        </div>
-        <div name="slide">
-          <Projects/>
-        </div>
+        <div name="slide"> <HomePage/> </div>
+        <div name="slide"> <AboutMe/> </div>
+        <div name="resizable slide"> <ArtDesign/> </div>
+        <div name="slide"> <Projects/> </div>
       </Carousel>
     </div>
     );
