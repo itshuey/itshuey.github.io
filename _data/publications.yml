@@ -1,22 +1,57 @@
 main:
 
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
+# =========================================================
+# 2026 — Manuscript in preparation
+# =========================================================
+- title: "Disentangling Preference Soups With Parameter-Efficient Personalization"
+  authors: "Huey Sun, Shivalika Singh, Arash Ahmadian, Jon Ander Campos, Beyza Ermis, Sara Hooker"
+  conference_short: ""
+  conference: "Manuscript in preparation (2026)."
+  pdf: ""
+  code: ""
+  image: "./assets/img/teaser_example.png"
+  notes: "Manuscript in preparation"
 
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+# =========================================================
+# 2025 — arXiv Preprints
+# =========================================================
+- title: "Enhancing Instruction-Following Capabilities in Seq2Seq Models: DoLA Adaptations for T5"
+  authors: "Huey Sun, Anabel Yong, Lorenzo Gilly, Felipe Jin"
+  conference_short: "arXiv"
+  conference: "arXiv preprint (2025)."
+  pdf: "https://arxiv.org/pdf/???.pdf"   # insert final link
+  code: ""
+  image: "./assets/img/teaser_example.png"
+  notes: "Preprint"
+
+- title: "Diminishing Returns in Self-Supervised Learning"
+  authors: "Oliver Bridge, Huey Sun, B. Branyicskai-Nagy, C. D’Ornano, S. Basu"
+  conference_short: "arXiv"
+  conference: "arXiv preprint (2025)."
+  pdf: "https://arxiv.org/pdf/???.pdf"   # insert final link
+  code: ""
+  image: "./assets/img/teaser_example.png"
+  notes: "Preprint"
+
+# =========================================================
+# Peer-Reviewed Conference Papers
+# =========================================================
+- title: "Limits of Transfer Learning"
+  authors: "Jake Williams, Abel Tadesse, Tyler Sam, Huey Sun, George Montañez"
+  conference_short: "LOD"
+  conference: "Learning and Optimization Conference (LOD), 2020."
+  pdf: ""
+  code: ""
+  bibtex: ""
+  image: "./assets/img/teaser_example.png"
+  notes: "Student authors contributed equally"
+
+- title: "Decomposable Probability-of-Success Metrics in Algorithmic Search"
+  authors: "Tyler Sam, Jake Williams, Abel Tadesse, Huey Sun, George Montañez"
+  conference_short: "ICAART"
+  conference: "International Conference on Agents and Artificial Intelligence (ICAART), 2020."
+  pdf: ""
+  code: ""
+  bibtex: ""
+  image: "./assets/img/teaser_example.png"
+  notes: "Student authors contributed equally"
