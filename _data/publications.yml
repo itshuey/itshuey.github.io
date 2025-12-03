@@ -5,12 +5,8 @@ main:
 # =========================================================
 - title: "Disentangling Preference Soups With Parameter-Efficient Personalization"
   authors: "Huey Sun, Shivalika Singh, Arash Ahmadian, Jon Ander Campos, Beyza Ermis, Sara Hooker"
-  conference_short: ""
   conference: "Manuscript in preparation (2026)."
-  pdf: ""
-  code: ""
   image: "./assets/img/teaser_example.png"
-  notes: "Manuscript in preparation"
 
 # =========================================================
 # 2025 — arXiv Preprints
@@ -19,19 +15,18 @@ main:
   authors: "Huey Sun, Anabel Yong, Lorenzo Gilly, Felipe Jin"
   conference_short: "arXiv"
   conference: "arXiv preprint (2025)."
-  pdf: "https://arxiv.org/pdf/???.pdf"   # insert final link
-  code: ""
+  pdf: "https://github.com/itshuey/DoLa/blob/main/paper.pdf"   # insert final link
+  code: "https://github.com/itshuey/DoLa/"
   image: "./assets/img/teaser_example.png"
-  notes: "Preprint"
+  notes: " Preprint"
 
 - title: "Diminishing Returns in Self-Supervised Learning"
-  authors: "Oliver Bridge, Huey Sun, B. Branyicskai-Nagy, C. D’Ornano, S. Basu"
+  authors: "Oliver Bridge, Huey Sun, Botond Branyicskai-Nagy, Charles D’Ornano, Shomit Basu"
   conference_short: "arXiv"
   conference: "arXiv preprint (2025)."
-  pdf: "https://arxiv.org/pdf/???.pdf"   # insert final link
-  code: ""
+  pdf: "https://github.com/itshuey/diminishing-returns/blob/main/report.pdf"   # insert final link
   image: "./assets/img/teaser_example.png"
-  notes: "Preprint"
+  notes: " Preprint"
 
 # =========================================================
 # Peer-Reviewed Conference Papers
@@ -40,18 +35,17 @@ main:
   authors: "Jake Williams, Abel Tadesse, Tyler Sam, Huey Sun, George Montañez"
   conference_short: "LOD"
   conference: "Learning and Optimization Conference (LOD), 2020."
-  pdf: ""
-  code: ""
-  bibtex: ""
+  pdf: "https://arxiv.org/abs/2006.12694"
+  bibtex: "https://dblp.org/rec/conf/mod/WilliamsTSSM20.html?view=bibtex"
   image: "./assets/img/teaser_example.png"
-  notes: "Student authors contributed equally"
+  notes: " Student authors contributed equally"
 
 - title: "Decomposable Probability-of-Success Metrics in Algorithmic Search"
   authors: "Tyler Sam, Jake Williams, Abel Tadesse, Huey Sun, George Montañez"
   conference_short: "ICAART"
   conference: "International Conference on Agents and Artificial Intelligence (ICAART), 2020."
-  pdf: ""
-  code: ""
-  bibtex: ""
+  pdf: "https://arxiv.org/abs/2001.00742"
+  bibtex: "https://dblp.org/rec/conf/icaart/SamWTSM20.html?view=bibtex, 
+}"
   image: "./assets/img/teaser_example.png"
-  notes: "Student authors contributed equally"
+  notes: " Student authors contributed equally"
