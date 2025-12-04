@@ -15,7 +15,7 @@ main:
   authors: "Huey Sun, Anabel Yong, Lorenzo Gilly, Felipe Jin"
   conference_short: "arXiv"
   conference: "arXiv preprint (2025)."
-  pdf: "https://github.com/itshuey/DoLa/blob/main/paper.pdf"   # insert final link
+  pdf: "https://arxiv.org/abs/2512.03803"
   code: "https://github.com/itshuey/DoLa/"
   image: "./assets/img/teaser_example.png"
   notes: " Preprint"
@@ -24,7 +24,7 @@ main:
   authors: "Oliver Bridge, Huey Sun, Botond Branyicskai-Nagy, Charles D’Ornano, Shomit Basu"
   conference_short: "arXiv"
   conference: "arXiv preprint (2025)."
-  pdf: "https://github.com/itshuey/diminishing-returns/blob/main/report.pdf"   # insert final link
+  pdf: "https://arxiv.org/abs/2512.03862"
   image: "./assets/img/teaser_example.png"
   notes: " Preprint"
 
