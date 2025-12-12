@@ -6,7 +6,7 @@ main:
 - title: "Disentangling Preference Soups With Parameter-Efficient Personalization"
   authors: "Huey Sun, Shivalika Singh, Arash Ahmadian, Jon Ander Campos, Beyza Ermis, Sara Hooker"
   conference: "Manuscript in preparation (2026)."
-  image: "./assets/img/teaser_example.png"
+  image: "./assets/img/pref-soups-fig.jpg"
 
 # =========================================================
 # 2025 — arXiv Preprints
@@ -17,16 +17,16 @@ main:
   conference: "arXiv preprint (2025)."
   pdf: "https://arxiv.org/abs/2512.03803"
   code: "https://github.com/itshuey/DoLa/"
-  image: "./assets/img/teaser_example.png"
-  notes: " Preprint"
+  image: "./assets/img/dola-fig.jpg"
+  notes: "Preprint"
 
 - title: "Diminishing Returns in Self-Supervised Learning"
   authors: "Oliver Bridge, Huey Sun, Botond Branyicskai-Nagy, Charles D’Ornano, Shomit Basu"
   conference_short: "arXiv"
   conference: "arXiv preprint (2025)."
   pdf: "https://arxiv.org/abs/2512.03862"
-  image: "./assets/img/teaser_example.png"
-  notes: " Preprint"
+  image: "./assets/img/diminishing-fig.jpg"
+  notes: "Preprint"
 
 # =========================================================
 # Peer-Reviewed Conference Papers
@@ -37,8 +37,8 @@ main:
   conference: "Learning and Optimization Conference (LOD), 2020."
   pdf: "https://arxiv.org/abs/2006.12694"
   bibtex: "https://dblp.org/rec/conf/mod/WilliamsTSSM20.html?view=bibtex"
-  image: "./assets/img/teaser_example.png"
-  notes: " Student authors contributed equally"
+  image: "./assets/img/transfer-fig.png"
+  notes: "Student authors contributed equally"
 
 - title: "Decomposable Probability-of-Success Metrics in Algorithmic Search"
   authors: "Tyler Sam, Jake Williams, Abel Tadesse, Huey Sun, George Montañez"
@@ -47,5 +47,5 @@ main:
   pdf: "https://arxiv.org/abs/2001.00742"
   bibtex: "https://dblp.org/rec/conf/icaart/SamWTSM20.html?view=bibtex, 
 }"
-  image: "./assets/img/teaser_example.png"
-  notes: " Student authors contributed equally"
+  image: "./assets/img/decomposable-fig.jpg"
+  notes: "Student authors contributed equally"
