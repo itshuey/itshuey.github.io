@@ -21,10 +21,11 @@ main:
   notes: "Preprint"
 
 - title: "Diminishing Returns in Self-Supervised Learning"
-  authors: "Oliver Bridge, Huey Sun, Botond Branyicskai-Nagy, Charles D’Ornano, Shomit Basu"
+  authors: "Oliver Bridge, Huey Sun, Botond Branyicskai-Nagy, Charles-Antoine D’Ornano, Shomit Basu"
   conference_short: "arXiv"
   conference: "arXiv preprint (2025)."
   pdf: "https://arxiv.org/abs/2512.03862"
+  code: "https://github.com/itshuey/masked-image-modelling"
   image: "./assets/img/diminishing-fig.jpg"
   notes: "Preprint"
 
