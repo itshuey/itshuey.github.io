@@ -29,6 +29,17 @@ main:
   notes: "Preprint"
 
 # =========================================================
+# 2024 — MsC Thesis
+# =========================================================
+- title: "Thinking Forwards, Backwards, and in Code: Improving Tool Acquisition in Large Language Models"
+  authors: "Huey Sun, Yihong Chen, Pontus Stenetorp"
+  conference_short: "Thesis"
+  conference: "MsC Thesis (2024)."
+  pdf: "https://github.com/itshuey/tool-acquisition/blob/main/thesis.pdf"
+  code: "https://github.com/itshuey/tool-acquisition"
+  image: "./assets/img/thesis-fig.jpg"
+
+# =========================================================
 # Peer-Reviewed Conference Papers
 # =========================================================
 - title: "Limits of Transfer Learning"
